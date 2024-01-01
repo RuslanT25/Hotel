@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.DAL.Abstract
+namespace Hotel.DAL.Contracts
 {
-    public interface ITestimonialDal : IGenericDal<Testimonial>
+    public interface ISubscribeDal : IGenericDal<Subscribe>
     {
     }
 }

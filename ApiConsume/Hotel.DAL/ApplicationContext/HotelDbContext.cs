@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.DAL.Concreate
+namespace Hotel.DAL.ApplicationContext
 {
     public class HotelDbContext : DbContext
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.DAL.Abstract
+namespace Hotel.DAL.Contracts
 {
     public interface IGenericDal<T> where T : class
     {
