@@ -1140,6 +1140,51 @@
             "rid": "win"
           }
         }
+      },
+      "Hotel.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Hotel.DAL": "1.0.0",
+          "Hotel.Entity": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hotel.Business.dll": {}
+        }
+      },
+      "Hotel.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Hotel.Entity": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hotel.DAL.dll": {}
+        }
+      },
+      "Hotel.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hotel.Entity.dll": {}
+        }
       }
     }
   },
@@ -3300,10 +3345,28 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Hotel.Business/1.0.0": {
+      "type": "project",
+      "path": "../Hotel.Business/Hotel.Business.csproj",
+      "msbuildProject": "../Hotel.Business/Hotel.Business.csproj"
+    },
+    "Hotel.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Hotel.DAL/Hotel.DAL.csproj",
+      "msbuildProject": "../Hotel.DAL/Hotel.DAL.csproj"
+    },
+    "Hotel.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Hotel.Entity/Hotel.Entity.csproj",
+      "msbuildProject": "../Hotel.Entity/Hotel.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Hotel.Business >= 1.0.0",
+      "Hotel.DAL >= 1.0.0",
+      "Hotel.Entity >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
@@ -3337,7 +3400,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj": {
+              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj"
+            },
+            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
+              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
+            },
+            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

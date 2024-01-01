@@ -12,3 +12,8 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.Business.runtimeconfig.json
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.csproj.AssemblyReference.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.genruntimeconfig.cache
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.DAL.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.Entity.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.DAL.pdb
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.Entity.pdb
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.csproj.CopyComplete

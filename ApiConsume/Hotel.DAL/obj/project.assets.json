@@ -1053,6 +1053,20 @@
             "rid": "win"
           }
         }
+      },
+      "Hotel.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
+        },
+        "compile": {
+          "bin/placeholder/Hotel.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hotel.Entity.dll": {}
+        }
       }
     }
   },
@@ -2875,10 +2889,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Hotel.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Hotel.Entity/Hotel.Entity.csproj",
+      "msbuildProject": "../Hotel.Entity/Hotel.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Hotel.Entity >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
@@ -2911,7 +2931,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
