@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Hotel.Entity.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +13,13 @@ namespace Hotel.DAL.Concreate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-JVM62VU\\SQLEXPRESS;database=Udemy-Hotel;Integrated Security=true");
+            optionsBuilder.UseSqlServer("server=DESKTOP-JVM62VU\\SQLEXPRESS;database=Udemy-Hotel;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
     }
 }

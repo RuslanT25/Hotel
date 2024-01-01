@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.Concrete
+namespace Hotel.Entity.Entities
 {
     public class Service
     {
