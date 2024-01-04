@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Holet.Map\Holet.Map.csproj" />
     <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj" />
   </ItemGroup>
 

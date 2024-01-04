@@ -12,7 +12,7 @@ namespace Hotel.Entity.Models
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public BaseEntity()
+        protected BaseEntity()
         {
             CreatedDate = DateTime.Now;
         }

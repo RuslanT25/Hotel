@@ -15,3 +15,5 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\obj\Debug\net7.0\refin
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\obj\Debug\net7.0\Hotel.DAL.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\obj\Debug\net7.0\Hotel.DAL.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\obj\Debug\net7.0\ref\Hotel.DAL.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\bin\Debug\net7.0\Holet.Map.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.DAL\bin\Debug\net7.0\Holet.Map.pdb

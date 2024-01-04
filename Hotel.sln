@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Business", "ApiConsum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Web", "Frontend\Hotel.Web\Hotel.Web.csproj", "{1962ABE5-4604-48D5-BF43-C6342D5DF416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Holet.Map", "Holet.Map\Holet.Map.csproj", "{7041A15D-96A4-4921-92EF-4446157651FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{1962ABE5-4604-48D5-BF43-C6342D5DF416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1962ABE5-4604-48D5-BF43-C6342D5DF416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1962ABE5-4604-48D5-BF43-C6342D5DF416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7041A15D-96A4-4921-92EF-4446157651FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7041A15D-96A4-4921-92EF-4446157651FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7041A15D-96A4-4921-92EF-4446157651FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7041A15D-96A4-4921-92EF-4446157651FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{D0809A0D-63DC-4C28-B55C-2B9AF0706E39} = {925D194B-4103-4572-9373-E44EA6A230BA}
 		{63874784-B46B-411C-A309-CEE1233CB03D} = {925D194B-4103-4572-9373-E44EA6A230BA}
 		{1962ABE5-4604-48D5-BF43-C6342D5DF416} = {416CA95E-8915-46BC-BBBC-8E37D841882D}
+		{7041A15D-96A4-4921-92EF-4446157651FC} = {925D194B-4103-4572-9373-E44EA6A230BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BF48965-4885-4672-9CAA-52B6EBFAA096}

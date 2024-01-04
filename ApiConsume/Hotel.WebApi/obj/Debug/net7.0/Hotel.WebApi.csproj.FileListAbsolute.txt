@@ -79,3 +79,13 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\re
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\ref\Hotel.WebApi.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\EntityFramework.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\System.Data.SqlClient.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Holet.Map.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Holet.Map.pdb
