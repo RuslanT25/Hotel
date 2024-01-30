@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Holet.Map\Holet.Map.csproj" />
     <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj" />
+    <ProjectReference Include="..\Hotel.MAP\Hotel.MAP.csproj" />
   </ItemGroup>
 
 </Project>

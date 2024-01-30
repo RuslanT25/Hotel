@@ -1,5 +1,5 @@
-﻿using Holet.Map.Options;
-using Hotel.Entity.Entities;
+﻿using Hotel.Entity.Entities;
+using Hotel.MAP.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
@@ -20,7 +20,6 @@ namespace Hotel.DAL.ApplicationContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ServiceMap());
-            modelBuilder.ApplyConfiguration(new StaffMap());
             modelBuilder.ApplyConfiguration(new TestimonialMap());
         }
 
