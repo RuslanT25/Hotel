@@ -702,7 +702,6 @@
       },
       "Hotel.DAL/1.0.0": {
         "dependencies": {
-          "Holet.Map": "1.0.0",
           "Hotel.Entity": "1.0.0",
           "Hotel.MAP": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
@@ -728,14 +727,6 @@
         },
         "runtime": {
           "Hotel.MAP.dll": {}
-        }
-      },
-      "Holet.Map.Reference/1.0.0.0": {
-        "runtime": {
-          "Holet.Map.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       }
     }
@@ -1234,11 +1225,6 @@
     },
     "Hotel.MAP/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Holet.Map.Reference/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

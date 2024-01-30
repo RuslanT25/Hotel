@@ -1189,26 +1189,10 @@
           }
         }
       },
-      "Holet.Map/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "EntityFramework": "6.4.4",
-          "Hotel.Entity": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.14"
-        },
-        "compile": {
-          "bin/placeholder/Holet.Map.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Holet.Map.dll": {}
-        }
-      },
       "Hotel.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Holet.Map": "1.0.0",
           "Hotel.Entity": "1.0.0",
           "Hotel.MAP": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
@@ -3415,11 +3399,6 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Holet.Map/1.0.0": {
-      "type": "project",
-      "path": "../../Holet.Map/Holet.Map.csproj",
-      "msbuildProject": "../../Holet.Map/Holet.Map.csproj"
     },
     "Hotel.DAL/1.0.0": {
       "type": "project",

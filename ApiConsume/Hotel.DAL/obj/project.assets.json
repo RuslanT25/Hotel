@@ -1189,21 +1189,6 @@
           }
         }
       },
-      "Holet.Map/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "EntityFramework": "6.4.4",
-          "Hotel.Entity": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.14"
-        },
-        "compile": {
-          "bin/placeholder/Holet.Map.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Holet.Map.dll": {}
-        }
-      },
       "Hotel.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3399,11 +3384,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Holet.Map/1.0.0": {
-      "type": "project",
-      "path": "../../Holet.Map/Holet.Map.csproj",
-      "msbuildProject": "../../Holet.Map/Holet.Map.csproj"
-    },
     "Hotel.Entity/1.0.0": {
       "type": "project",
       "path": "../Hotel.Entity/Hotel.Entity.csproj",
@@ -3417,7 +3397,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Holet.Map >= 1.0.0",
       "Hotel.Entity >= 1.0.0",
       "Hotel.MAP >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
@@ -3458,9 +3437,6 @@
             },
             "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.MAP\\Hotel.MAP.csproj": {
               "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.MAP\\Hotel.MAP.csproj"
-            },
-            "D:\\Udemy\\Consume api-rapid api\\Hotel\\Holet.Map\\Holet.Map.csproj": {
-              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Holet.Map\\Holet.Map.csproj"
             }
           }
         }

@@ -1,5 +1,6 @@
 ﻿using Hotel.DAL.ApplicationContext;
 using Hotel.DAL.Contracts;
+using Hotel.DAL.Repositories.Abstracts;
 using Hotel.Entity.Entities;
 using System;
 using System.Collections.Generic;

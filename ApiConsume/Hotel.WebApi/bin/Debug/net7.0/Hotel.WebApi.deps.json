@@ -705,7 +705,6 @@
       },
       "Hotel.DAL/1.0.0": {
         "dependencies": {
-          "Holet.Map": "1.0.0",
           "Hotel.Entity": "1.0.0",
           "Hotel.MAP": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
