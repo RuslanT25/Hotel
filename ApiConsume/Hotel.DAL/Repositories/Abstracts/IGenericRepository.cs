@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,5 +24,11 @@ namespace Hotel.DAL.Repositories.Abstracts
         void DeleteRange(List<T> list);
         void Destroy(T entity);
         void DestroyRange(List<T> list);
+
+        // Linq Commands
+        IQueryable<T> Where(Expression<Func<T, bool>> predicate);
+        Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+        Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate);
+        Task<T> FindAsync(int id);
     }
 }

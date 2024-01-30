@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.Business.Results
 {
-    public class DataResult<T> : Result,IDataResult<T>
+    public class DataResult<T> : Result
     {
         // Result-a statusu ve mesaji gonder,ozunde ise data-ni ver.
         public DataResult(T data,bool success,string message) : base(success,message)

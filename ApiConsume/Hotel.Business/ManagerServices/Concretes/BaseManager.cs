@@ -18,7 +18,7 @@ namespace Hotel.Business.ManagerServices.Concretes
         }
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+            //var result = _genericRepository.
         }
 
         public Task AddAsync(T entity)

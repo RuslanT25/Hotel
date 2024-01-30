@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.Business.Results
 {
-    public class Result : IResult
+    public class Result
     {
         public bool Success { get; }
 
