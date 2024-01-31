@@ -89,3 +89,8 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\ru
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Hotel.MAP.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Hotel.MAP.pdb
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Castle.Core.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Autofac.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Autofac.Extensions.DependencyInjection.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

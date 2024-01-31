@@ -1,3 +1,8 @@
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using Hotel.Business.DependencyResolvers;
+using Hotel.Business.DependencyResolvers.Autofac;
+
 namespace Hotel.WebApi
 {
     public class Program
@@ -9,6 +14,15 @@ namespace Hotel.WebApi
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContextService(); // DbContextServiceInjection-daki metodu elave edirem.
+                                                    
+            // Register AutofacBusinessModule
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(builder =>
+                {
+                    builder.RegisterModule(new AutofacBusinessModule());
+                });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

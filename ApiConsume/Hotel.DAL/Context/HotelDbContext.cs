@@ -12,9 +12,9 @@ namespace Hotel.DAL.ApplicationContext
 {
     public class HotelDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public HotelDbContext(DbContextOptions<HotelDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-JVM62VU\\SQLEXPRESS;database=Udemy-Hotel;Trusted_Connection=true;TrustServerCertificate=True");
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
