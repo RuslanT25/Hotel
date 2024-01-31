@@ -17,5 +17,10 @@ namespace Hotel.Business.Results
         {
 
         }
+
+        public SuccessDataResult(string message) : base(default, true, message)
+        {
+
+        }
     }
 }

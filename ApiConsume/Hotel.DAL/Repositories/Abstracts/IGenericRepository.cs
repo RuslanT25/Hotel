@@ -10,8 +10,10 @@ namespace Hotel.DAL.Repositories.Abstracts
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {
-        List<T> GetAllAsync();
-        T GetByIdAsync(int id);
+        Task<List<T>> GetAllAsync();
+        List<T> GetAll();
+        Task<T> GetByIdAsync(int id);
+        T GetById(int id);
 
         //Modify Commands
         void Add(T entity);
@@ -28,7 +30,10 @@ namespace Hotel.DAL.Repositories.Abstracts
         // Linq Commands
         IQueryable<T> Where(Expression<Func<T, bool>> predicate);
         Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+        bool Any(Expression<Func<T, bool>> predicate);
         Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate);
         Task<T> FindAsync(int id);
+        T Find(int id);
+        int Count();
     }
 }

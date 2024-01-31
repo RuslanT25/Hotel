@@ -1,6 +1,9 @@
-﻿using Hotel.Business.ManagerServices.Abstracts;
+﻿using Hotel.Business.Constants;
+using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Business.Results;
 using Hotel.DAL.Repositories.Abstracts;
 using Hotel.Entity.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,71 +12,195 @@ using System.Threading.Tasks;
 
 namespace Hotel.Business.ManagerServices.Concretes
 {
-    public class BaseManager<T> : IBaseService<T> where T : BaseEntity
+    public abstract class BaseManager<T> : IBaseService<T> where T : BaseEntity
     {
         readonly IGenericRepository<T> _genericRepository;
-        public BaseManager(IGenericRepository<T> genericRepository)
+        protected BaseManager(IGenericRepository<T> genericRepository)
         {
             _genericRepository = genericRepository;
         }
-        public void Add(T entity)
+        public virtual Result Add(T entity)
         {
-            //var result = _genericRepository.
+            var result = _genericRepository.Any(x => x.Id == entity.Id);
+            if (!result)
+            {
+                _genericRepository.Add(entity);
+                return new SuccessResult(Messages<T>.Entity<T>.Add());
+            }
+
+            return new ErrorResult(Messages<T>.Entity<T>.Exists());
         }
 
-        public Task AddAsync(T entity)
+        public virtual async Task<Result> AddAsync(T entity)
         {
-            throw new NotImplementedException();
+            var result = await _genericRepository.AnyAsync(x => x.Id == entity.Id);
+            if (!result)
+            {
+                await _genericRepository.AddAsync(entity);
+                return new SuccessResult(Messages<T>.Entity<T>.Add());
+            }
+
+            return new ErrorResult(Messages<T>.Entity<T>.Exists());
         }
 
-        public void AddRange(List<T> list)
+        public Result AddRange(List<T> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (var entity in list)
+                {
+                    if (!_genericRepository.Any(x => x.Id == entity.Id))
+                    {
+                        _genericRepository.Add(entity);
+                    }
+                }
+
+                return new SuccessResult(Messages<T>.Entity<T>.AddRange());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"An error occurred: {ex.Message}");
+            }
         }
 
-        public Task AddRangeAsync(List<T> list)
+        public async Task<Result> AddRangeAsync(List<T> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (var entity in list)
+                {
+                    if (await _genericRepository.AnyAsync(x => x.Id == entity.Id))
+                    {
+                        await _genericRepository.AddAsync(entity);
+                    }
+                }
+
+                return new SuccessResult(Messages<T>.Entity<T>.AddRange());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"An error occurred: {ex.Message}");
+            }
         }
 
-        public void Delete(T entity)
+
+        public Result Delete(T entity)
         {
-            throw new NotImplementedException();
+            var result = _genericRepository.Find(entity.Id);
+            if (result !=  null)
+            {
+                _genericRepository.Delete(entity);
+                return new SuccessResult(Messages<T>.Entity<T>.Delete());
+            }
+
+            return new ErrorResult(Messages<T>.Error());
         }
 
-        public void DeleteRange(List<T> list)
+        public Result DeleteRange(List<T> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (var entity in list)
+                {
+                    if (_genericRepository.Any(x => x.Id == entity.Id))
+                    {
+                        _genericRepository.Delete(entity);
+                    }
+                }
+
+                return new SuccessResult(Messages<T>.Entity<T>.DeleteRange());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"An error occurred: {ex.Message}");
+            }
         }
 
-        public void Destroy(T entity)
+
+        public Result Destroy(T entity)
         {
-            throw new NotImplementedException();
+            var result = _genericRepository.Any(x => x.Id == entity.Id);
+            if (!result)
+            {
+                _genericRepository.Destroy(entity);
+                return new SuccessResult(Messages<T>.Entity<T>.Destroy());
+            }
+
+            return new ErrorResult(Messages<T>.Error()); 
         }
 
-        public void DestroyRange(List<T> list)
+        public Result DestroyRange(List<T> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (var entity in list)
+                {
+                    if (_genericRepository.Any(x => x.Id == entity.Id))
+                    {
+                        _genericRepository.Destroy(entity);
+                    }
+                }
+
+                return new SuccessResult(Messages<T>.Entity<T>.DestroyRange());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"An error occurred: {ex.Message}");
+            }
         }
 
-        public List<T> GetAllAsync()
+        public DataResult<List<T>> GetAll()
         {
-            throw new NotImplementedException();
+            var result = _genericRepository.Count();
+            if (result == 0)
+            {
+                return new ErrorDataResult<List<T>>(Messages<T>.NotFound());
+            }
+
+            return new SuccessDataResult<List<T>>(_genericRepository.GetAll());
         }
 
-        public T GetByIdAsync(int id)
+        public DataResult<T> GetById(int id)
         {
-            throw new NotImplementedException();
+            var entity = _genericRepository.GetById(id);
+            if (entity != null)
+            {
+                return new SuccessDataResult<T>(entity);
+            }
+
+            return new ErrorDataResult<T>(Messages<T>.NotFound());
         }
 
-        public void Update(T entity)
+        public Result Update(T entity)
         {
-            throw new NotImplementedException();
+            var result = _genericRepository.GetById(entity.Id);
+            if (result != null)
+            {
+                _genericRepository.Update(result);
+                return new SuccessDataResult<T>(Messages<T>.Entity<T>.Update());
+            }
+
+            return new ErrorDataResult<T>(Messages<T>.Entity<T>.Exists());
         }
 
-        public void UpdateRange(List<T> list)
+        public Result UpdateRange(List<T> list)
         {
-            throw new NotImplementedException();
+            try
+            {
+                foreach (var entity in list)
+                {
+                    if (_genericRepository.Any(x => x.Id == entity.Id))
+                    {
+                        _genericRepository.Update(entity);
+                    }
+                }
+
+                return new SuccessResult(Messages<T>.Entity<T>.UpdateRange());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorResult($"An error occurred: {ex.Message}");
+            }
         }
     }
 }

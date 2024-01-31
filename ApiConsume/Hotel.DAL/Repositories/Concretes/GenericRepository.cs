@@ -70,12 +70,22 @@ namespace Hotel.DAL.Repositories.Concretes
             _context.SaveChanges();
         }
 
-        public List<T> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public List<T> GetAll()
         {
             return _context.Set<T>().ToList();
         }
 
-        public T GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await _context.Set<T>().FindAsync(id);
+        }
+
+        public T GetById(int id)
         {
             return _context.Set<T>().Find(id);
         }
@@ -105,6 +115,11 @@ namespace Hotel.DAL.Repositories.Concretes
             return await _context.Set<T>().AnyAsync(expression);
         }
 
+        public bool Any(Expression<Func<T, bool>> expression)
+        {
+            return _context.Set<T>().Any(expression);
+        }
+
         public async Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> expression)
         {
             return await _context.Set<T>().FirstOrDefaultAsync(expression);
@@ -113,6 +128,14 @@ namespace Hotel.DAL.Repositories.Concretes
         public async Task<T> FindAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);
+        }
+        public T Find(int id)
+        {
+            return _context.Set<T>().Find(id);
+        }
+        public int Count()
+        {
+            return _context.Set<T>().Count();
         }
     }
 }
