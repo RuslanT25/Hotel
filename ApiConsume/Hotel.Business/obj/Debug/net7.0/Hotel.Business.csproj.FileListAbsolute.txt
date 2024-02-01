@@ -17,5 +17,3 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\ref\Hotel.Business.dll
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.MAP.dll
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\bin\Debug\net7.0\Hotel.MAP.pdb

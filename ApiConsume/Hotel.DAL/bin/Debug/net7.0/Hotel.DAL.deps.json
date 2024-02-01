@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "Hotel.DAL/1.0.0": {
         "dependencies": {
+          "EntityFramework": "6.4.4",
           "Hotel.Entity": "1.0.0",
-          "Hotel.MAP": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
           "Microsoft.EntityFrameworkCore.Design": "7.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
@@ -708,15 +708,6 @@
         "runtime": {
           "Hotel.Entity.dll": {}
         }
-      },
-      "Hotel.MAP/1.0.0": {
-        "dependencies": {
-          "EntityFramework": "6.4.4",
-          "Hotel.Entity": "1.0.0"
-        },
-        "runtime": {
-          "Hotel.MAP.dll": {}
-        }
       }
     }
   },
@@ -1203,11 +1194,6 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Hotel.Entity/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Hotel.MAP/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

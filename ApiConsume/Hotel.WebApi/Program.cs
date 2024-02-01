@@ -18,10 +18,18 @@ namespace Hotel.WebApi
                                                     
             // Register AutofacBusinessModule
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
-                .ConfigureContainer<ContainerBuilder>(builder =>
+                .ConfigureContainer<ContainerBuilder>(builder =>    
                 {
                     builder.RegisterModule(new AutofacBusinessModule());
                 });
+
+            builder.Services.AddCors(opt =>
+            {
+                opt.AddPolicy("HotelApi", opts =>
+                {
+                    opts.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                });
+            });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -37,6 +45,8 @@ namespace Hotel.WebApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("HotelApi");
 
             app.UseAuthorization();
 

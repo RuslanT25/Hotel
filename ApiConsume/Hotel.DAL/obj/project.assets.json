@@ -1202,20 +1202,6 @@
         "runtime": {
           "bin/placeholder/Hotel.Entity.dll": {}
         }
-      },
-      "Hotel.MAP/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "EntityFramework": "6.4.4",
-          "Hotel.Entity": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Hotel.MAP.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Hotel.MAP.dll": {}
-        }
       }
     }
   },
@@ -3388,17 +3374,12 @@
       "type": "project",
       "path": "../Hotel.Entity/Hotel.Entity.csproj",
       "msbuildProject": "../Hotel.Entity/Hotel.Entity.csproj"
-    },
-    "Hotel.MAP/1.0.0": {
-      "type": "project",
-      "path": "../Hotel.MAP/Hotel.MAP.csproj",
-      "msbuildProject": "../Hotel.MAP/Hotel.MAP.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "EntityFramework >= 6.4.4",
       "Hotel.Entity >= 1.0.0",
-      "Hotel.MAP >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
@@ -3434,9 +3415,6 @@
           "projectReferences": {
             "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
               "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
-            },
-            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.MAP\\Hotel.MAP.csproj": {
-              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.MAP\\Hotel.MAP.csproj"
             }
           }
         }
@@ -3451,6 +3429,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.4.4, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.14, )"
