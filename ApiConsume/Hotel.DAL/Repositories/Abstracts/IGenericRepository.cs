@@ -34,6 +34,6 @@ namespace Hotel.DAL.Repositories.Abstracts
         Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate);
         Task<T> FindAsync(int id);
         T Find(int id);
-        int Count();
+        Task<int> CountAsync();
     }
 }

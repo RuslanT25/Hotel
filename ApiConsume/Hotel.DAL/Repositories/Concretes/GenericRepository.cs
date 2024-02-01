@@ -4,7 +4,7 @@ using Hotel.DAL.Repositories.Abstracts;
 using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -92,8 +92,7 @@ namespace Hotel.DAL.Repositories.Concretes
 
         public void Update(T entity)
         {
-            entity.ModifiedDate = DateTime.Now;
-            _context.Update(entity);
+            _context.Entry(entity).State = EntityState.Modified;
             _context.SaveChanges();
         }
 
@@ -133,9 +132,9 @@ namespace Hotel.DAL.Repositories.Concretes
         {
             return _context.Set<T>().Find(id);
         }
-        public int Count()
+        public async Task<int> CountAsync()
         {
-            return _context.Set<T>().Count();
+            return await _context.Set<T>().CountAsync();
         }
     }
 }

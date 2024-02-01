@@ -10,8 +10,8 @@ namespace Hotel.Business.ManagerServices.Abstracts
 {
     public interface IBaseService<T> where T : BaseEntity
     {
-        DataResult<List<T>> GetAll();
-        DataResult<T> GetById(int id);
+        Task<DataResult<List<T>>> GetAllAsync();
+        Task<DataResult<T>> GetByIdAsync(int id);
 
         //Modify Commands
         Result Add(T entity);

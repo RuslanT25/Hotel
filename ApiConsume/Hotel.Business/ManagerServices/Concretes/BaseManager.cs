@@ -69,7 +69,7 @@ namespace Hotel.Business.ManagerServices.Concretes
             {
                 foreach (var entity in list)
                 {
-                    if (await _genericRepository.AnyAsync(x => x.Id == entity.Id))
+                    if (!await _genericRepository.AnyAsync(x => x.Id == entity.Id))
                     {
                         await _genericRepository.AddAsync(entity);
                     }
@@ -120,7 +120,7 @@ namespace Hotel.Business.ManagerServices.Concretes
         public Result Destroy(T entity)
         {
             var result = _genericRepository.Any(x => x.Id == entity.Id);
-            if (!result)
+            if (result)
             {
                 _genericRepository.Destroy(entity);
                 return new SuccessResult(Messages<T>.Entity<T>.Destroy());
@@ -149,20 +149,20 @@ namespace Hotel.Business.ManagerServices.Concretes
             }
         }
 
-        public DataResult<List<T>> GetAll()
+        public async Task<DataResult<List<T>>> GetAllAsync()
         {
-            var result = _genericRepository.Count();
+            var result = await _genericRepository.CountAsync();
             if (result == 0)
             {
                 return new ErrorDataResult<List<T>>(Messages<T>.NotFound());
             }
 
-            return new SuccessDataResult<List<T>>(_genericRepository.GetAll());
+            return new SuccessDataResult<List<T>>(await _genericRepository.GetAllAsync());
         }
 
-        public DataResult<T> GetById(int id)
+        public async Task<DataResult<T>> GetByIdAsync(int id)
         {
-            var entity = _genericRepository.GetById(id);
+            var entity = await _genericRepository.GetByIdAsync(id);
             if (entity != null)
             {
                 return new SuccessDataResult<T>(entity);
@@ -187,12 +187,11 @@ namespace Hotel.Business.ManagerServices.Concretes
         {
             try
             {
-                foreach (var entity in list)
+                foreach (var entity in from entity in list
+                                       where _genericRepository.Any(x => x.Id == entity.Id)
+                                       select entity)
                 {
-                    if (_genericRepository.Any(x => x.Id == entity.Id))
-                    {
-                        _genericRepository.Update(entity);
-                    }
+                    _genericRepository.Update(entity);
                 }
 
                 return new SuccessResult(Messages<T>.Entity<T>.UpdateRange());
