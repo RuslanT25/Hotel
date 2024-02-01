@@ -17,7 +17,7 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpGet("getall")]
-        public async Task<IActionResult> RoomList()
+        public async Task<IActionResult> GetAllRooms()
         {
             var result = await _roomService.GetAllAsync();
             if (result.Success)
