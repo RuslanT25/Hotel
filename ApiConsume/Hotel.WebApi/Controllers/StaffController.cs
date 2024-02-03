@@ -63,7 +63,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id}")]
         public IActionResult DeleteStaff(int id)
         {
             var staff = _staffService.GetByIdAsync(id).Result.Data;
@@ -89,7 +89,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpDelete("destroy")]
+        [HttpDelete("destroy/{id}")]
         public IActionResult DestroyStaff(int id)
         {
             var staff = _staffService.GetByIdAsync(id).Result.Data;
