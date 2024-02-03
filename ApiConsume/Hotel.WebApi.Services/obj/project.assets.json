@@ -3978,6 +3978,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Hotel.Entity >= 1.0.0",
       "Hotel.WebApi >= 1.0.0",
       "Microsoft.Extensions.Http >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3"
@@ -4010,6 +4011,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+            },
             "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj": {
               "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj"
             }

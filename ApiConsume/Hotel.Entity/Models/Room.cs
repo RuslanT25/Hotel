@@ -1,11 +1,10 @@
-﻿using Hotel.Entity.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.Entities
+namespace Hotel.Entity.Models
 {
     public class Room : BaseEntity
     {
@@ -16,6 +15,6 @@ namespace Hotel.Entity.Entities
         public string Description { get; set; }
         public int BedCount { get; set; }
         public int BathCount { get; set; }
-        public string Wifi {  get; set; }
+        public string Wifi { get; set; }
     }
 }

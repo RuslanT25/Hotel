@@ -4262,6 +4262,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Hotel.Entity": "1.0.0",
           "Hotel.WebApi": "1.0.0",
           "Microsoft.Extensions.Http": "8.0.0",
           "Newtonsoft.Json": "13.0.3"

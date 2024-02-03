@@ -1,4 +1,8 @@
 
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Hotel.WebApi.Services.DependencyResolvers.Autofac;
+
 namespace Hotel.Web
 {
     public class Program
@@ -9,6 +13,14 @@ namespace Hotel.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddHttpClient();
+            //Register AutocadModule
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(builder =>
+                {
+                    builder.RegisterModule(new AutofacBusinessModule());
+                });
 
             var app = builder.Build();
 

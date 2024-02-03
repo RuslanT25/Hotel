@@ -1,7 +1,7 @@
 ﻿using Hotel.Business.ManagerServices.Abstracts;
 using Hotel.DAL.Contracts;
 using Hotel.DAL.Repositories.Abstracts;
-using Hotel.Entity.Entities;
+using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,7 +1,6 @@
 ﻿using Azure.Core;
 using Hotel.DAL.ApplicationContext;
 using Hotel.DAL.Repositories.Abstracts;
-using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Hotel.Entity.Models;
 
 namespace Hotel.DAL.Repositories.Concretes
 {

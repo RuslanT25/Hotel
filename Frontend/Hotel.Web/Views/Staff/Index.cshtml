@@ -1,5 +1,4 @@
-﻿
-@model List<StaffViewModel>
+﻿@model List<Staff>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
@@ -20,11 +19,11 @@
             <th>@item.Id</th>
             <th>@item.Name</th>
             <th>@item.Title</th>
-            <th><a href="#" class="btn btn-danger">Delete</a></th>
+            <th><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></th>
             <th><a href="#" class="btn btn-warning">Update</a></th>
             <th><a href="#" class="btn btn-dark">Details</a></th>
         </tr>
     }
 </table>
 
-<a href="#" class="btn btn-info">New Personel</a>
+<a href="/Staff/Add/" class="btn btn-info">New Personel</a>

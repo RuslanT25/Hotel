@@ -1,6 +1,6 @@
 ﻿using Castle.Components.DictionaryAdapter.Xml;
 using Hotel.Business.ManagerServices.Abstracts;
-using Hotel.Entity.Entities;
+using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

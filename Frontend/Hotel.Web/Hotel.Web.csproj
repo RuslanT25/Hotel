@@ -24,4 +24,8 @@
     <ProjectReference Include="..\..\ApiConsume\Hotel.WebApi.Services\Hotel.WebApi.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

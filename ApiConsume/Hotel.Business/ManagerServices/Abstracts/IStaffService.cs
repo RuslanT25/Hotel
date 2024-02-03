@@ -1,4 +1,4 @@
-﻿using Hotel.Entity.Entities;
+﻿using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

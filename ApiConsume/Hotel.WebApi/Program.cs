@@ -15,7 +15,7 @@ namespace Hotel.WebApi
 
             builder.Services.AddControllers();
             builder.Services.AddDbContextService(); // DbContextServiceInjection-daki metodu elave edirem.
-                                                    
+
             // Register AutofacBusinessModule
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureContainer<ContainerBuilder>(builder =>    

@@ -1,5 +1,5 @@
 ﻿using Hotel.DAL.Configurations;
-using Hotel.Entity.Entities;
+using Hotel.Entity.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
