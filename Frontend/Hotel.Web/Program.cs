@@ -1,3 +1,4 @@
+
 namespace Hotel.Web
 {
     public class Program

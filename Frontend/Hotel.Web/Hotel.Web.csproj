@@ -20,4 +20,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\ApiConsume\Hotel.WebApi.Services\Hotel.WebApi.Services.csproj" />
+  </ItemGroup>
+
 </Project>

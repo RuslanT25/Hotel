@@ -4,6 +4,427 @@
     "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Hotel.Web.csproj": {}
   },
   "projects": {
+    "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj",
+        "projectName": "Hotel.Business",
+        "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
+              },
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj",
+        "projectName": "Hotel.DAL",
+        "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj",
+        "projectName": "Hotel.Entity",
+        "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj",
+        "projectName": "Hotel.WebApi.Services",
+        "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj",
+        "projectName": "Hotel.WebApi",
+        "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj",
+        "packagesPath": "C:\\Users\\r\\.nuget\\packages\\",
+        "outputPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj"
+              },
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
+              },
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Hotel.Web.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +448,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj": {
+                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
