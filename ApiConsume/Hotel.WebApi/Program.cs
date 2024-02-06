@@ -2,6 +2,7 @@ using Autofac.Extensions.DependencyInjection;
 using Autofac;
 using Hotel.Business.DependencyResolvers;
 using Hotel.Business.DependencyResolvers.Autofac;
+using Hotel.Entity.Mapper;
 
 namespace Hotel.WebApi
 {
@@ -30,6 +31,8 @@ namespace Hotel.WebApi
                     opts.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                 });
             });
+
+            builder.Services.AddAutoMapper(typeof(MapProfile));
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

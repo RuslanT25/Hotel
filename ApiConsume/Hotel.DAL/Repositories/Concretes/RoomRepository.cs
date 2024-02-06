@@ -1,4 +1,5 @@
-﻿using Hotel.DAL.ApplicationContext;
+﻿using AutoMapper;
+using Hotel.DAL.ApplicationContext;
 using Hotel.DAL.Contracts;
 using Hotel.DAL.Repositories.Concretes;
 using Hotel.Entity.Models;

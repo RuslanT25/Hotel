@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ssjy5gvVfC9zJfQ7fG50pMrWciMgPLD+14q0GKrwIHpWPIDpkFNZ8nonbK7Iv97m7ZKqfxB1YHUYpthnL+u3Lw==",
+  "dgSpecHash": "SRMldhgZx3o+h9CVAfhOz0I56m6FUjvhn/bMvaDtAchR6tNsoFBGZ9pOM7kmcdSVsHA/wSshyrXKZWelRzY5fA==",
   "success": true,
   "projectFilePath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\r\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\r\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\r\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",

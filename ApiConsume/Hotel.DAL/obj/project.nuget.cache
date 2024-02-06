@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "d15BRJCjijCUDBqwSg4bZO2U//VTlMiIDKf7b5reB3fN3y3of7+1/Oz8O3Prc51vpMAqhMzLbV9jK7WmSgGmbg==",
+  "dgSpecHash": "0rouhr5mk7ak6Hy1RdPOrOqYHOHBcRhdYjjeK6Depo2MOCwvcFJIKlvqCudIjK4RTOOzhA8s5DqPtD1yVc4DEQ==",
   "success": true,
   "projectFilePath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\r\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

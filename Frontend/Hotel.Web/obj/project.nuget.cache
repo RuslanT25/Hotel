@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "x6e0JI+IZCdrqFuN8EKEIpT0qM/RAyxBeOq5Q05ItKFDLwqQAw2viDjLqgU9eYoGmWbAD74+fAEqI3H9+2sJaQ==",
+  "dgSpecHash": "3w9sFFyhyHESQI4D34hBJFpXnW4MExkxNG8fJXl2Kybpr0tOhU0hEeNvibHeAfCXZgax44W+47iX3FZOuXM+lA==",
   "success": true,
   "projectFilePath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Hotel.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\r\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\autofac.extensions.dependencyinjection\\9.0.0\\autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\r\\.nuget\\packages\\automapper\\13.0.0\\automapper.13.0.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",

@@ -289,3 +289,4 @@ D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\Microso
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\Hotel.WebApi.Services.dll
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\Hotel.WebApi.Services.pdb
+D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\AutoMapper.dll

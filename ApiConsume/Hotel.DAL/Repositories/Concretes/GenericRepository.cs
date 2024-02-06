@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Hotel.Entity.Models;
+using AutoMapper;
 
 namespace Hotel.DAL.Repositories.Concretes
 {
@@ -92,15 +93,21 @@ namespace Hotel.DAL.Repositories.Concretes
 
         public void Update(T entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
-            _context.SaveChanges();
+            var model = _context.Set<T>().Find(entity.Id);
+            if (model != null)
+            {
+                _context.Entry(model).State = EntityState.Detached;
+                _context.Entry(entity).State = EntityState.Modified;
+                entity.ModifiedDate = DateTime.Now;
+                _context.SaveChanges();
+            }
         }
 
         public void UpdateRange(List<T> list)
         {
             foreach (T entity in list)
             {
-                Update(entity);
+                //Update(entity);
             }
         }
 

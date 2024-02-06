@@ -92,3 +92,4 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Mi
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Autofac.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Autofac.Extensions.DependencyInjection.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\AutoMapper.dll

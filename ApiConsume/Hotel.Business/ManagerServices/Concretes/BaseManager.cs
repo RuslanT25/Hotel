@@ -1,4 +1,5 @@
-﻿using Hotel.Business.Constants;
+﻿using AutoMapper;
+using Hotel.Business.Constants;
 using Hotel.Business.ManagerServices.Abstracts;
 using Hotel.Business.Results;
 using Hotel.DAL.Repositories.Abstracts;
@@ -176,7 +177,7 @@ namespace Hotel.Business.ManagerServices.Concretes
             var result = _genericRepository.GetById(entity.Id);
             if (result != null)
             {
-                _genericRepository.Update(result);
+                _genericRepository.Update(entity);
                 return new SuccessDataResult<T>(Messages<T>.Entity<T>.Update());
             }
 
@@ -191,7 +192,7 @@ namespace Hotel.Business.ManagerServices.Concretes
                                        where _genericRepository.Any(x => x.Id == entity.Id)
                                        select entity)
                 {
-                    _genericRepository.Update(entity);
+                    //_genericRepository.Update(entity);
                 }
 
                 return new SuccessResult(Messages<T>.Entity<T>.UpdateRange());

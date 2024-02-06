@@ -40,6 +40,18 @@
           }
         }
       },
+      "AutoMapper/13.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.0.0"
+          }
+        }
+      },
       "Azure.Core/1.25.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -778,6 +790,7 @@
       },
       "Hotel.Entity/1.0.0": {
         "dependencies": {
+          "AutoMapper": "13.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14"
         },
@@ -787,6 +800,7 @@
       },
       "Hotel.WebApi/1.0.0": {
         "dependencies": {
+          "AutoMapper": "13.0.0",
           "Hotel.Business": "1.0.0",
           "Hotel.DAL": "1.0.0",
           "Hotel.Entity": "1.0.0",
@@ -819,6 +833,13 @@
       "sha512": "sha512-tf+//4MBola256qaaVQqQ6tx2R57S8A8BFekRWNpHkpSFzRBPkU+/fEDUSrCjqldK/B2zRoDbsMcQmYy3PYGWg==",
       "path": "autofac.extensions.dependencyinjection/9.0.0",
       "hashPath": "autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512"
+    },
+    "AutoMapper/13.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BFMiZ5kNqbN1ircgFE7qtXWzGjGf1UnEPo39dWlvaPFVep75cikyjFCFssthj9l2ZC4OkeG4vXIgMTApnedSNg==",
+      "path": "automapper/13.0.0",
+      "hashPath": "automapper.13.0.0.nupkg.sha512"
     },
     "Azure.Core/1.25.0": {
       "type": "package",

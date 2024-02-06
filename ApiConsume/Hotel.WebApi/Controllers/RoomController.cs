@@ -1,5 +1,7 @@
-﻿using Castle.Components.DictionaryAdapter.Xml;
+﻿using AutoMapper;
+using Castle.Components.DictionaryAdapter.Xml;
 using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +13,11 @@ namespace Hotel.WebApi.Controllers
     public class RoomController : ControllerBase
     {
         readonly IRoomService _roomService;
-        public RoomController(IRoomService roomService)
+        readonly IMapper _mapper;
+        public RoomController(IRoomService roomService, IMapper mapper)
         {
             _roomService = roomService;
+            _mapper = mapper;
         }
 
         [HttpGet("getall")]
@@ -41,8 +45,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddRoom(Room room)
+        public async Task<IActionResult> AddRoom(RoomPostDTO model)
         {
+            var room = _mapper.Map<Room>(model);
             var result = await _roomService.AddAsync(room);
             if (result.Success)
             {
@@ -53,8 +58,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("addrange")]
-        public async Task<IActionResult> AddRangeRoom(List<Room> rooms)
+        public async Task<IActionResult> AddRangeRoom(List<RoomPostDTO> model)
         {
+            var rooms=_mapper.Map<List<Room>>(model);
             var result = await _roomService.AddRangeAsync(rooms);
             if (result.Success)
             {
@@ -64,7 +70,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpPut("update")]
+        [HttpPut("update/{id}")]
         public IActionResult UpdateRoom(Room room)
         {
             var result = _roomService.Update(room);
