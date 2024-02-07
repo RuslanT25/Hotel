@@ -1,6 +1,7 @@
-﻿using Hotel.Entity.DTOs.Staff;
+﻿using Hotel.Entity.Models;
 using Hotel.WebApi.Services.WebApiServices;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Packaging.Signing;
 
 namespace Hotel.Web.Controllers
 {
@@ -26,9 +27,26 @@ namespace Hotel.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(StaffPostDTO staffPost)
+        public async Task<IActionResult> Add(Staff staff)
         {
-            await _staffApiService.AddStaffAsync(staffPost);
+            await _staffApiService.AddStaffAsync(staff);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            var staff = await _staffApiService.GetStaffByIdAsync(id);
+
+            return View(staff);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(Staff model) 
+        {
+            await _staffApiService.UpdateStaffAsync(model);
 
             return RedirectToAction("Index");
         }

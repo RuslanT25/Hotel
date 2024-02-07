@@ -21097,6 +21097,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\wwwroot\\uploads\\Admin\\SideBar\\staff.png",
+      "PackagePath": "staticwebassets\\uploads\\Admin\\SideBar\\staff.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Hotel.Web.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

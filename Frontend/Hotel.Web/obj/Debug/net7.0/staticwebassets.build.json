@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pVc1qgrT/XeDVfQV0TU8h2xTTmf2FQBE3dyzUemJSMY=",
+  "Hash": "2fprpulH/3XWstIuIPVRTs59JoZHHxudSmbVKAwW0SE=",
   "Source": "Hotel.Web",
   "BasePath": "_content/Hotel.Web",
   "Mode": "Default",
@@ -89702,6 +89702,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\wwwroot\\uploads\\Admin\\SideBar\\staff.png",
+      "SourceId": "Hotel.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\wwwroot\\",
+      "BasePath": "_content/Hotel.Web",
+      "RelativePath": "uploads/Admin/SideBar/staff.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Admin\\SideBar\\staff.png"
     }
   ]
 }

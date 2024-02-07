@@ -1,5 +1,5 @@
-﻿using Hotel.Entity.DTOs.Staff;
-using Hotel.Entity.Models;
+﻿using Hotel.Entity.Models;
+using Hotel.WebApi.Services.ApiResponseModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -35,24 +35,24 @@ namespace Hotel.WebApi.Services.WebApiServices
         }
 
 
-        public async Task<Staff> GetStaffAsync(int id)
+        public async Task<Staff> GetStaffByIdAsync(int id)
         {
             var response = await _httpClient.GetAsync($"/api/Staff/{id}");
             response.EnsureSuccessStatusCode();
 
             var data = await response.Content.ReadAsStringAsync();
-            var staff = JsonConvert.DeserializeObject<Staff>(data);
+            var responseData = JsonConvert.DeserializeObject<ResponseData<Staff>>(data);
 
-            return staff ?? throw new Exception("Staff is empty");
+            return responseData.Data ?? throw new Exception("Staff is empty");
         }
 
-        public async Task AddStaffAsync(StaffPostDTO staff)
+        public async Task AddStaffAsync(Staff staff)
         {
             var response = await _httpClient.PostAsJsonAsync("/api/Staff/add", staff);
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task AddRangeStaffAsync(List<StaffPostDTO> staffList)
+        public async Task AddRangeStaffAsync(List<Staff> staffList)
         {
             foreach (var staff in staffList)
             {
@@ -98,6 +98,12 @@ namespace Hotel.WebApi.Services.WebApiServices
             };
 
             var response = await _httpClient.SendAsync(request);
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task UpdateStaffAsync(Staff model)
+        {
+            var response = await _httpClient.PutAsJsonAsync("/api/Staff/update/" + model.Id, model);
             response.EnsureSuccessStatusCode();
         }
     }
