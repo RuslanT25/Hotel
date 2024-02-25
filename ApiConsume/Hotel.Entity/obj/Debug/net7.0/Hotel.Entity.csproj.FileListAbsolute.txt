@@ -12,3 +12,4 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\re
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\ref\Hotel.Entity.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.sourcelink.json

@@ -11,9 +11,10 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.AssemblyInfoInputs.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.AssemblyInfo.cs
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.csproj.CoreCompileInputs.cache
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.csproj.CopyComplete
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\refint\Hotel.Business.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\ref\Hotel.Business.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Business.sourcelink.json
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Business\obj\Debug\net7.0\Hotel.Bu.C691E417.Up2Date

@@ -73,7 +73,6 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\st
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\staticwebassets.build.json
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\staticwebassets.development.json
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\scopedcss\bundle\Hotel.WebApi.styles.css
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.csproj.CopyComplete
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\refint\Hotel.WebApi.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.pdb
@@ -93,3 +92,11 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Au
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Autofac.Extensions.DependencyInjection.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\AutoMapper.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.sourcelink.json
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.We.8DCC89F8.Up2Date

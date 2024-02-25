@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Hotel.Web
 build_property.RootNamespace = Hotel.Web
 build_property.ProjectDir = D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -70,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Udemy/Consume api-rapid api/Hotel/Frontend/Hotel.Web/Views/Staff/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Udemy/Consume api-rapid api/Hotel/Frontend/Hotel.Web/Views/Testimonial/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Udemy/Consume api-rapid api/Hotel/Frontend/Hotel.Web/Views/Testimonial/Index.cshtml]

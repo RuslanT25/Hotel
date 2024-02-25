@@ -1,5 +1,6 @@
 ﻿using Hotel.DAL.Configurations;
 using Hotel.Entity.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.DAL.ApplicationContext
 {
-    public class HotelDbContext : DbContext
+    public class HotelDbContext : IdentityDbContext<AppUser,AppRole,int>
     {
         public HotelDbContext(DbContextOptions<HotelDbContext> options) : base(options)
         {
@@ -19,6 +20,7 @@ namespace Hotel.DAL.ApplicationContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ServiceMap());
             modelBuilder.ApplyConfiguration(new TestimonialMap());
         }
