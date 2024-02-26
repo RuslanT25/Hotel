@@ -70,7 +70,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("update")]
         public IActionResult UpdateRoom(Room room)
         {
             var result = _roomService.Update(room);

@@ -63,6 +63,30 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
+        [HttpPut("update")]
+        public IActionResult UpdateSubscribe(Subscribe subscribe)
+        {
+            var result = _subscribeService.Update(subscribe);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpPut("updaterange")]
+        public IActionResult UpdateRange(List<Subscribe> subscribes)
+        {
+            var result = _subscribeService.UpdateRange(subscribes);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
         [HttpDelete("delete")]
         public IActionResult DeleteSubscribe(int id)
         {

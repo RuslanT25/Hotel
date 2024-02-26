@@ -7,9 +7,9 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Ho
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.AssemblyInfoInputs.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.AssemblyInfo.cs
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.csproj.CoreCompileInputs.cache
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.sourcelink.json
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\refint\Hotel.Entity.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\ref\Hotel.Entity.dll
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.Entity\obj\Debug\net7.0\Hotel.Entity.sourcelink.json

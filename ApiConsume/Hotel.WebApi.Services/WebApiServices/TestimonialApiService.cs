@@ -102,7 +102,7 @@ namespace Hotel.WebApi.Services.WebApiServices
 
         public async Task UpdateTestimonialAsync(Testimonial model)
         {
-            var response = await _httpClient.PutAsJsonAsync("/api/Testimonial/update/" + model.Id, model);
+            var response = await _httpClient.PutAsJsonAsync("/api/Testimonial/update/", model);
             response.EnsureSuccessStatusCode();
         }
     }

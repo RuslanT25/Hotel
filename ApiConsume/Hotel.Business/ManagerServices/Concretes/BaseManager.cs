@@ -153,10 +153,10 @@ namespace Hotel.Business.ManagerServices.Concretes
         public async Task<DataResult<List<T>>> GetAllAsync()
         {
             var result = await _genericRepository.CountAsync();
-            if (result == 0)
-            {
-                return new ErrorDataResult<List<T>>(Messages<T>.NotFound());
-            }
+            //if (result == 0)
+            //{
+            //    return new ErrorDataResult<List<T>>(Messages<T>.NotFound());
+            //}
 
             return new SuccessDataResult<List<T>>(await _genericRepository.GetAllAsync());
         }

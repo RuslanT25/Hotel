@@ -3,3 +3,5 @@
 
 # Ignore obj directory
 **/obj/
+
+.vs/

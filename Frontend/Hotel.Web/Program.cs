@@ -1,6 +1,7 @@
 
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Hotel.Entity.Mapper;
 using Hotel.WebApi.Services.DependencyResolvers.Autofac;
 
 namespace Hotel.Web
@@ -15,12 +16,12 @@ namespace Hotel.Web
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddHttpClient();
-            //Register AutocadModule
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureContainer<ContainerBuilder>(builder =>
                 {
                     builder.RegisterModule(new AutofacBusinessModule());
                 });
+            builder.Services.AddAutoMapper(typeof(MapProfile));
 
             var app = builder.Build();
 

@@ -63,6 +63,30 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
+        [HttpPut("update")]
+        public IActionResult UpdateTestimonial(Testimonial testimonial)
+        {
+            var result = _testimonialService.Update(testimonial);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpPut("updaterange")]
+        public IActionResult UpdateRange(List<Testimonial> testimonials)
+        {
+            var result = _testimonialService.UpdateRange(testimonials);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
         [HttpDelete("delete")]
         public IActionResult DeleteTestimonial(int id)
         {

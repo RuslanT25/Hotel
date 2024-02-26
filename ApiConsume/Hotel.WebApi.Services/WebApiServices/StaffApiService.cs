@@ -103,7 +103,7 @@ namespace Hotel.WebApi.Services.WebApiServices
 
         public async Task UpdateStaffAsync(Staff model)
         {
-            var response = await _httpClient.PutAsJsonAsync("/api/Staff/update/" + model.Id, model);
+            var response = await _httpClient.PutAsJsonAsync("/api/Staff/update/", model);
             response.EnsureSuccessStatusCode();
         }
     }

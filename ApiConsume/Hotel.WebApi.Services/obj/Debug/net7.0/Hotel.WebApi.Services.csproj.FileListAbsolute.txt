@@ -20,10 +20,10 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.AssemblyInfoInputs.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.AssemblyInfo.cs
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.csproj.CoreCompileInputs.cache
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.sourcelink.json
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.We.00B9CB8F.Up2Date
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\refint\Hotel.WebApi.Services.dll
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\ref\Hotel.WebApi.Services.dll
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.WebApi.Services.sourcelink.json
-D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi.Services\obj\Debug\net7.0\Hotel.We.00B9CB8F.Up2Date

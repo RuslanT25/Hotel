@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFAB103C-01F1-4B30-A11F-AE71B3F13BF4}|ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj|d:\\udemy\\consume api-rapid api\\hotel\\apiconsume\\hotel.entity\\dtos\\service\\servicepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAB103C-01F1-4B30-A11F-AE71B3F13BF4}|ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj|solutionrelative:apiconsume\\hotel.entity\\dtos\\service\\servicepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|d:\\udemy\\consume api-rapid api\\hotel\\apiconsume\\hotel.webapi.services\\webapiservices\\testimonialapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|solutionrelative:apiconsume\\hotel.webapi.services\\webapiservices\\testimonialapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1962ABE5-4604-48D5-BF43-C6342D5DF416}|Frontend\\Hotel.Web\\Hotel.Web.csproj|d:\\udemy\\consume api-rapid api\\hotel\\frontend\\hotel.web\\validations\\service\\serviceputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1962ABE5-4604-48D5-BF43-C6342D5DF416}|Frontend\\Hotel.Web\\Hotel.Web.csproj|solutionrelative:frontend\\hotel.web\\validations\\service\\serviceputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|D:\\Udemy\\Consume api-rapid api\\Hotel\\apiconsume\\hotel.webapi.services\\webapiservices\\serviceapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|solutionrelative:apiconsume\\hotel.webapi.services\\webapiservices\\serviceapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1962ABE5-4604-48D5-BF43-C6342D5DF416}|Frontend\\Hotel.Web\\Hotel.Web.csproj|d:\\udemy\\consume api-rapid api\\hotel\\frontend\\hotel.web\\validations\\service\\servicepostvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1962ABE5-4604-48D5-BF43-C6342D5DF416}|Frontend\\Hotel.Web\\Hotel.Web.csproj|solutionrelative:frontend\\hotel.web\\validations\\service\\servicepostvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|D:\\Udemy\\Consume api-rapid api\\Hotel\\apiconsume\\hotel.webapi.services\\webapiservices\\staffapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C45082-CB53-43D6-B92F-48DCBE22D6A0}|ApiConsume\\Hotel.WebApi.Services\\Hotel.WebApi.Services.csproj|solutionrelative:apiconsume\\hotel.webapi.services\\webapiservices\\staffapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAB103C-01F1-4B30-A11F-AE71B3F13BF4}|ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj|d:\\udemy\\consume api-rapid api\\hotel\\apiconsume\\hotel.entity\\dtos\\service\\servicegetputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAB103C-01F1-4B30-A11F-AE71B3F13BF4}|ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj|solutionrelative:apiconsume\\hotel.entity\\dtos\\service\\servicegetputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|D:\\Udemy\\Consume api-rapid api\\Hotel\\apiconsume\\hotel.webapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|solutionrelative:apiconsume\\hotel.webapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|D:\\Udemy\\Consume api-rapid api\\Hotel\\apiconsume\\hotel.webapi\\controllers\\subscribecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|solutionrelative:apiconsume\\hotel.webapi\\controllers\\subscribecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|D:\\Udemy\\Consume api-rapid api\\Hotel\\apiconsume\\hotel.webapi\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFA9B56-A71B-4278-853F-0D6C6F3C70DB}|ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj|solutionrelative:apiconsume\\hotel.webapi\\controllers\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,55 +54,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServicePutValidator.cs",
-              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Validations\\Service\\ServicePutValidator.cs",
-              "RelativeDocumentMoniker": "Frontend\\Hotel.Web\\Validations\\Service\\ServicePutValidator.cs",
-              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Validations\\Service\\ServicePutValidator.cs",
-              "RelativeToolTip": "Frontend\\Hotel.Web\\Validations\\Service\\ServicePutValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "DocumentIndex": 4,
+              "Title": "SubscribeController.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\SubscribeController.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi\\Controllers\\SubscribeController.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\SubscribeController.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi\\Controllers\\SubscribeController.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAQwHYAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:36:33.773Z",
+              "WhenOpened": "2024-02-26T07:34:21.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAQwI4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T07:33:08.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestimonialApiService.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\TestimonialApiService.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\TestimonialApiService.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\TestimonialApiService.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\TestimonialApiService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T07:32:40.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServicePostValidator.cs",
-              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Validations\\Service\\ServicePostValidator.cs",
-              "RelativeDocumentMoniker": "Frontend\\Hotel.Web\\Validations\\Service\\ServicePostValidator.cs",
-              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\Frontend\\Hotel.Web\\Validations\\Service\\ServicePostValidator.cs",
-              "RelativeToolTip": "Frontend\\Hotel.Web\\Validations\\Service\\ServicePostValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "StaffApiService.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\StaffApiService.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\StaffApiService.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\StaffApiService.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\StaffApiService.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAwFkAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:35:37.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-26T07:32:21.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServiceGetPutDTO.cs",
-              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServiceGetPutDTO.cs",
-              "RelativeDocumentMoniker": "ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServiceGetPutDTO.cs",
-              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServiceGetPutDTO.cs",
-              "RelativeToolTip": "ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServiceGetPutDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "DocumentIndex": 5,
+              "Title": "StaffController.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\StaffController.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi\\Controllers\\StaffController.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi\\Controllers\\StaffController.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi\\Controllers\\StaffController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAAEEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:30:34.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-26T07:30:38.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicePostDTO.cs",
-              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServicePostDTO.cs",
-              "RelativeDocumentMoniker": "ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServicePostDTO.cs",
-              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServicePostDTO.cs",
-              "RelativeToolTip": "ApiConsume\\Hotel.Entity\\DTOs\\Service\\ServicePostDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "DocumentIndex": 1,
+              "Title": "ServiceApiService.cs",
+              "DocumentMoniker": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\ServiceApiService.cs",
+              "RelativeDocumentMoniker": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\ServiceApiService.cs",
+              "ToolTip": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\ServiceApiService.cs",
+              "RelativeToolTip": "ApiConsume\\Hotel.WebApi.Services\\WebApiServices\\ServiceApiService.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAwFoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T17:18:29.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-26T07:12:33.794Z"
             }
           ]
         },
