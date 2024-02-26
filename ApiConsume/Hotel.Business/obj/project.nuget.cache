@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2xnS3lpUAgmFy4d2xwwJ4CY1wY7QoepdYOE53zzCsvZyEYjEhGWaMXFWNwzKEqux3TcWqKJceJ6PKYMboRtQhg==",
+  "dgSpecHash": "ydr5oXFakWWpemNgq3izyyWqDdagFwX4CJg5CniuOxYJBgR626h3WrKcrdzxUIrk93GfxOhCYneKWw6N3K0uQg==",
   "success": true,
   "projectFilePath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\r\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\r\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.14\\microsoft.aspnetcore.cryptography.internal.7.0.14.nupkg.sha512",
     "C:\\Users\\r\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.14\\microsoft.aspnetcore.cryptography.keyderivation.7.0.14.nupkg.sha512",

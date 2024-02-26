@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Hotel.Entity.Mapper;
+using Hotel.Web.DependencyResolvers.ValidationRegistration;
 using Hotel.WebApi.Services.DependencyResolvers.Autofac;
 
 namespace Hotel.Web
@@ -19,9 +20,10 @@ namespace Hotel.Web
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureContainer<ContainerBuilder>(builder =>
                 {
-                    builder.RegisterModule(new AutofacBusinessModule());
+                    builder.RegisterModule(new AutofacWebApiServiceModule());
                 });
             builder.Services.AddAutoMapper(typeof(MapProfile));
+            builder.Services.AddAllValidators();
 
             var app = builder.Build();
 

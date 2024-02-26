@@ -1,4 +1,4 @@
-﻿@model Staff
+﻿@model StaffGetPutDTO
 @{
     ViewData["Title"] = "Update";
     Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
@@ -7,18 +7,27 @@
 <form method="post">
     <label>Staff member Name</label>
     <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
     <br />
     <label>Staff job Title</label>
     <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+    <label>Staff member Number</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Number" class="text-danger"></span>
     <br />
     <label>SocialMedia1</label>
     <input type="text" asp-for="SocialMedia1" class="form-control" />
+    <span asp-validation-for="SocialMedia1" class="text-danger"></span>
     <br />
     <label>SocialMedia2</label>
     <input type="text" asp-for="SocialMedia2" class="form-control" />
+    <span asp-validation-for="SocialMedia2" class="text-danger"></span>
     <br />
     <label>SocialMedia3</label>
     <input type="text" asp-for="SocialMedia3" class="form-control" />
+    <span asp-validation-for="SocialMedia3" class="text-danger"></span>
     <br />
     <button class="btn btn-warning">Update Staff</button>
 </form>

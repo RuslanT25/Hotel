@@ -1,15 +1,22 @@
 ﻿using Autofac;
 using Hotel.WebApi.Services.WebApiServices;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Hotel.WebApi.Services.DependencyResolvers.Autofac
 {
-    public class AutofacBusinessModule : Module
+    public class AutofacWebApiServiceModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
             var serviceTypes = new Type[]
             {
-        typeof(StaffApiService)
+        typeof(StaffApiService),
+        typeof(ServiceApiService),
+        typeof(TestimonialApiService)
             };
 
             foreach (var serviceType in serviceTypes)
@@ -22,6 +29,5 @@ namespace Hotel.WebApi.Services.DependencyResolvers.Autofac
 
             }
         }
-
     }
 }

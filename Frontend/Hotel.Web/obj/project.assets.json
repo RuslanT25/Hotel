@@ -4323,6 +4323,7 @@
         "dependencies": {
           "Autofac": "8.0.0",
           "Autofac.Extensions.DependencyInjection": "9.0.0",
+          "FluentValidation": "11.9.0",
           "Hotel.DAL": "1.0.0",
           "Hotel.Entity": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.14",

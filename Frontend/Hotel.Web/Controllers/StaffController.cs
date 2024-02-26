@@ -1,4 +1,7 @@
-﻿using Hotel.Entity.Models;
+﻿using AutoMapper;
+using Hotel.Entity.DTOs.Staff;
+using Hotel.Entity.Models;
+using Hotel.Web.Validations.Staff;
 using Hotel.WebApi.Services.WebApiServices;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Packaging.Signing;
@@ -8,9 +11,13 @@ namespace Hotel.Web.Controllers
     public class StaffController : Controller
     {
         readonly StaffApiService _staffApiService;
-        public StaffController(StaffApiService staffApiService)
+        readonly StaffValidator _validator;
+        readonly IMapper _mapper;
+        public StaffController(StaffApiService staffApiService, StaffValidator validations, IMapper mapper)
         {
             _staffApiService = staffApiService;
+            _validator = validations;
+            _mapper = mapper;
         }
         public async Task<IActionResult> Index()
         {
@@ -27,8 +34,20 @@ namespace Hotel.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(Staff staff)
+        public async Task<IActionResult> Add(StaffPostDTO model)
         {
+            var staff=_mapper.Map<Staff>(model);
+            var result = _validator.Validate(model);
+            if (!result.IsValid)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View();
+            }
+
             await _staffApiService.AddStaffAsync(staff);
 
             return RedirectToAction("Index");
@@ -44,9 +63,21 @@ namespace Hotel.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(Staff model) 
+        public async Task<IActionResult> Update(StaffGetPutDTO model) 
         {
-            await _staffApiService.UpdateStaffAsync(model);
+            var staff =_mapper.Map<Staff>(model);
+            //var result = _validator.Validate(model);
+            //if (!result.IsValid)
+            //{
+            //    foreach (var error in result.Errors)
+            //    {
+            //        ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            //    }
+
+            //    return View();
+            //}
+
+            await _staffApiService.UpdateStaffAsync(staff);
 
             return RedirectToAction("Index");
         }

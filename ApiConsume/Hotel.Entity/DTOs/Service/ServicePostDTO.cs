@@ -10,6 +10,6 @@ namespace Hotel.Entity.DTOs.Service
     {
         public string Icon { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }
