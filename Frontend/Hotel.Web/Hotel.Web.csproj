@@ -31,6 +31,8 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Areas\Admin\Views\Service\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\PartialViews\" />
   </ItemGroup>
 
 </Project>
