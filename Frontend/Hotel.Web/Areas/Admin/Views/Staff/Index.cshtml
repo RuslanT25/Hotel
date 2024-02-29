@@ -1,0 +1,33 @@
+﻿@model List<Staff>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Staff Name</th>
+        <th>Staff Title</th>
+        <th>Staff Number</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Destroy</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Name</th>
+            <th>@item.Title</th>
+            <th>@item.Number</th>
+            <th><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info">Update</a></th>
+            <th><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-warning">Delete</a></th>
+            <th><a asp-action="Destroy" asp-route-id="@item.Id" class="btn btn-danger">Destroy</a></th>
+            <th><a href="#" class="btn btn-dark">Details</a></th>
+        </tr>
+    }
+</table>
+
+<a href="/Staff/Add/" class="btn btn-info">New Personel</a>

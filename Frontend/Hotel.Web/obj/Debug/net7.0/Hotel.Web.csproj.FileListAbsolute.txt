@@ -298,3 +298,4 @@ D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\FluentV
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\obj\Debug\net7.0\Hotel.Web.sourcelink.json
 D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\obj\Debug\net7.0\Hotel.Web.csproj.Up2Date
+D:\Udemy\Consume api-rapid api\Hotel\Frontend\Hotel.Web\obj\Debug\net7.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css

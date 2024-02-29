@@ -1,9 +1,12 @@
 
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Hotel.DAL.ApplicationContext;
 using Hotel.Entity.Mapper;
+using Hotel.Entity.Models;
 using Hotel.Web.DependencyResolvers.ValidationRegistration;
 using Hotel.WebApi.Services.DependencyResolvers.Autofac;
+using Microsoft.AspNetCore.Identity;
 
 namespace Hotel.Web
 {
@@ -24,6 +27,9 @@ namespace Hotel.Web
                 });
             builder.Services.AddAutoMapper(typeof(MapProfile));
             builder.Services.AddAllValidators();
+            builder.Services.AddIdentity<AppUser, AppRole>()
+                .AddEntityFrameworkStores<HotelDbContext>()
+                .AddDefaultTokenProviders();
 
             var app = builder.Build();
 
@@ -41,6 +47,11 @@ namespace Hotel.Web
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.MapControllerRoute(
+                  name: "admin",
+                  pattern: "{area:exists}/{controller=AdminLayout}/{action=Index}/{id?}"
+                );
 
             app.MapControllerRoute(
                 name: "default",

@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hotel.DAL\Hotel.DAL.csproj" />
-    <ProjectReference Include="..\Hotel.Entity\Hotel.Entity.csproj" />
   </ItemGroup>
 
 </Project>

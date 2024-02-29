@@ -30,9 +30,6 @@
             "projectReferences": {
               "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
                 "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
-              },
-              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
-                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
               }
             }
           }
@@ -401,12 +398,6 @@
             "projectReferences": {
               "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj": {
                 "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Business\\Hotel.Business.csproj"
-              },
-              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
-                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
-              },
-              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
-                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
               }
             }
           }
@@ -569,7 +560,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.12, )"
             }
           },
           "imports": [

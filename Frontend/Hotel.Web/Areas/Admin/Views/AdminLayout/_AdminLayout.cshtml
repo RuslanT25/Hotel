@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "_AdminLayout";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/HeadPartial.cshtml");
+
+<body>
+
+    @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/PreloaderPartial.cshtml");
+
+    <div id="main-wrapper">
+
+        @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/NavHeaderPartial.cshtml");
+
+        @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/HeaderPartial.cshtml");
+
+        @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/SideBarPartial.cshtml");
+
+        @*                          CONTENT BODY --------->>>START                          *@
+
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                @RenderBody()    
+                                @* RenderBody --> Layout-u istifade etdiyin razer view-da yazilan kodlari layout view-da gosterir
+                                (Layout view-de harda RenderBody() cagirmisansa gorunusu ora elave edir) *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*                          CONTENT BODY --------->>>END                          *@
+
+        @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/FooterPartial.cshtml");
+
+    </div>
+    
+    @await Html.PartialAsync("~/Areas/Admin/Views/AdminLayout/ScriptPartial.cshtml");
+
+</body>
+
+</html>
+

@@ -30,9 +30,6 @@
             "projectReferences": {
               "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
                 "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
-              },
-              "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
-                "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
               }
             }
           }

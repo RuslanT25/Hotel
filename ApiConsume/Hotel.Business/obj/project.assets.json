@@ -3859,7 +3859,6 @@
       "Autofac.Extensions.DependencyInjection >= 9.0.0",
       "FluentValidation >= 11.9.0",
       "Hotel.DAL >= 1.0.0",
-      "Hotel.Entity >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Proxies >= 7.0.14",
@@ -3896,9 +3895,6 @@
           "projectReferences": {
             "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj": {
               "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.DAL\\Hotel.DAL.csproj"
-            },
-            "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj": {
-              "projectPath": "D:\\Udemy\\Consume api-rapid api\\Hotel\\ApiConsume\\Hotel.Entity\\Hotel.Entity.csproj"
             }
           }
         }

@@ -100,3 +100,4 @@ D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\re
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.pdb
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\Hotel.WebApi.genruntimeconfig.cache
 D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\obj\Debug\net7.0\ref\Hotel.WebApi.dll
+D:\Udemy\Consume api-rapid api\Hotel\ApiConsume\Hotel.WebApi\bin\Debug\net7.0\FluentValidation.dll

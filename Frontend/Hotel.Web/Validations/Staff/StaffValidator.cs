@@ -1,8 +1,9 @@
 ﻿using FluentValidation;
+using Hotel.Entity.DTOs.Staff;
 
 namespace Hotel.Web.Validations.Staff
 {
-    public class StaffValidator : AbstractValidator<Hotel.Entity.DTOs.Staff.StaffPostDTO>
+    public class StaffValidator : AbstractValidator<StaffBaseDTO>
     {
         public StaffValidator()
         {
