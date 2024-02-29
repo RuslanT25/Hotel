@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_HeadPartial.cshtml")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_SpinnerPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_SliderPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_BookingPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_RoomPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_VideoPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_ServicePartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_TestimonialPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_TeamPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_NewsPartial.cshtml")
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_ScriptPartial.cshtml")
+</body>
+
+</html>
