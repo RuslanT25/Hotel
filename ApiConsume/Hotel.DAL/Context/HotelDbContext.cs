@@ -30,5 +30,6 @@ namespace Hotel.DAL.ApplicationContext
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }

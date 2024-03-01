@@ -3,6 +3,8 @@ using Hotel.Business.ManagerServices.Abstracts;
 using Hotel.Business.ManagerServices.Concretes;
 using Hotel.DAL.Contracts;
 using Hotel.DAL.Implementations;
+using Hotel.DAL.Repositories.Abstracts;
+using Hotel.DAL.Repositories.Concretes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +31,9 @@ namespace Hotel.Business.DependencyResolvers.Autofac
 
             builder.RegisterType<SubscribeManager>().As<ISubscribeService>().SingleInstance();
             builder.RegisterType<SubscribeRepository>().As<ISubscribeRepository>().SingleInstance();
+
+            builder.RegisterType<AboutManager>().As<IAboutService>().SingleInstance();
+            builder.RegisterType<AboutRepository>().As<IAboutRepository>().SingleInstance();
         }
     }
 }
