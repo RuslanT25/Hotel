@@ -1,0 +1,35 @@
+﻿
+@model AboutPostDTO
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>About title1</label>
+    <input type="text" asp-for="Title1" class="form-control" />
+    <span asp-validation-for="Title1" class="text-danger"></span>
+    <br />
+    <label>About title2</label>
+    <input type="text" asp-for="Title2" class="form-control" />
+    <span asp-validation-for="Title2" class="text-danger"></span>
+    <br />
+    <label>About description</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <label>Room count</label>
+    <input type="text" asp-for="RoomCount" class="form-control" />
+    <span asp-validation-for="RoomCount" class="text-danger"></span>
+    <br />
+    <label>Social media 1</label>
+    <input type="text" asp-for="StaffCount" class="form-control" />
+    <span asp-validation-for="StaffCount" class="text-danger"></span>
+    <br />
+    <label>Social media 2</label>
+    <input type="text" asp-for="CustomerCount" class="form-control" />
+    <span asp-validation-for="CustomerCount" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary">Add About</button>
+</form>
+

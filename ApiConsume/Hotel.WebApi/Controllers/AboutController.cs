@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Entity.DTOs.About;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,11 @@ namespace Hotel.WebApi.Controllers
     public class AboutController : ControllerBase
     {
         readonly IAboutService _aboutService;
-        public AboutController(IAboutService aboutService)
+        readonly IMapper _mapper;
+        public AboutController(IAboutService aboutService, IMapper mapper)
         {
             _aboutService = aboutService;
+            _mapper = mapper;
         }
 
         [HttpGet("getall")]
@@ -41,8 +44,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddAbout(About about)
+        public async Task<IActionResult> AddAbout(AboutPostDTO model)
         {
+            var about = _mapper.Map<About>(model);
             var result = await _aboutService.AddAsync(about);
             if (result.Success)
             {
@@ -53,8 +57,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("addrange")]
-        public async Task<IActionResult> AddRangeAbout(List<About> abouts)
+        public async Task<IActionResult> AddRangeAbout(List<AboutPostDTO> models)
         {
+            var abouts = _mapper.Map<List<About>>(models);
             var result = await _aboutService.AddRangeAsync(abouts);
             if (result.Success)
             {
@@ -65,8 +70,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateAbout(About about)
+        public IActionResult UpdateAbout(AboutPutDTO model)
         {
+            var about = _mapper.Map<About>(model);
             var result = _aboutService.Update(about);
             if (result.Success)
             {
@@ -77,8 +83,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<About> abouts)
+        public IActionResult UpdateRange(List<AboutPutDTO> models)
         {
+            var abouts = _mapper.Map<List<About>>(models);
             var result = _aboutService.UpdateRange(abouts);
             if (result.Success)
             {

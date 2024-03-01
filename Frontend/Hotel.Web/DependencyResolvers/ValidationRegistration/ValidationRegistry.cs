@@ -7,6 +7,7 @@ namespace Hotel.Web.DependencyResolvers.ValidationRegistration
         public static IServiceCollection AddAllValidators(this IServiceCollection services)
         {
             services.AddValidatorsFromAssemblyContaining<Validations.Staff.StaffValidator>();
+            services.AddValidatorsFromAssemblyContaining<Validations.About.AboutValidator>();
 
             return services;
         }

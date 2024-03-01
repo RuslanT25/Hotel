@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Hotel.Entity.DTOs.About;
 using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.DTOs.Service;
@@ -25,6 +26,9 @@ namespace Hotel.Entity.Mapper
             CreateMap<Staff,StaffGetPutDTO>().ReverseMap();
 
             CreateMap<AppUser,RegisterPostDTO>().ReverseMap();
+
+            CreateMap<About,AboutPostDTO>().ReverseMap();
+            CreateMap<About,AboutPutDTO>().ReverseMap();
         }
     }
 }
