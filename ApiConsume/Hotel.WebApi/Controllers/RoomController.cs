@@ -45,10 +45,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddRoom(RoomPostDTO model)
+        public async Task<IActionResult> AddRoom([FromForm] RoomPostDTO model)
         {
             var room = _mapper.Map<Room>(model);
-            var result = await _roomService.AddAsync(room);
+            var result = await _roomService.AddRoomWithImageAsync(room, model.ImageFile);
             if (result.Success)
             {
                 return Ok(result);
@@ -71,8 +71,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateRoom(Room room)
+        public IActionResult UpdateRoom(RoomGetPutDTO model)
         {
+            var room = _mapper.Map<Room>(model);
             var result = _roomService.Update(room);
             if (result.Success)
             {
@@ -83,8 +84,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<Room> rooms)
+        public IActionResult UpdateRange(List<RoomGetPutDTO> models)
         {
+            var rooms = _mapper.Map<List<Room>>(models);
             var result = _roomService.UpdateRange(rooms);
             if (result.Success)
             {

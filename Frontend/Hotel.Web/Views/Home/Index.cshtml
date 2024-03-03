@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@model HomeVM
+@{
 }
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_BookingPartial.cshtml")
 
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml")
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml",Model.Abouts)
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_RoomPartial.cshtml")
 

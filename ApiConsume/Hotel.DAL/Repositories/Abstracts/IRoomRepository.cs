@@ -1,5 +1,6 @@
 ﻿using Hotel.DAL.Repositories.Abstracts;
 using Hotel.Entity.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Hotel.DAL.Contracts
 {
     public interface IRoomRepository : IGenericRepository<Room>
     {
+        Task AddRoomWithImageAsync(Room room, IFormFile image);
     }
 }

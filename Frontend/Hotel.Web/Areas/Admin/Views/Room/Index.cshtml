@@ -1,0 +1,48 @@
+﻿@model List<RoomGetPutDTO>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Room number</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Bath count</th>
+        <th>Bed count</th>
+        <th>Wifi</th>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>Destroy</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.RoomNumber</td>
+            <td>
+                @if (item.Image != null)
+                {
+                    var base64 = Convert.ToBase64String(item.Image);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img src="@imgSrc" width="80" height="70" />
+                }
+            </td>
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td>@item.BathCount</td>
+            <td>@item.BedCount</td>
+            <td>@item.Wifi</td>
+            <td><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info">Update</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-warning">Delete</a></td>
+            <td><a asp-action="Destroy" asp-route-id="@item.Id" class="btn btn-danger">Destroy</a></td>
+            <td><a href="#" class="btn btn-dark">Details</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/admin/Room/Add/" class="btn btn-info">New Room</a>

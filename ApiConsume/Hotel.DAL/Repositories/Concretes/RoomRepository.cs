@@ -3,6 +3,7 @@ using Hotel.DAL.ApplicationContext;
 using Hotel.DAL.Contracts;
 using Hotel.DAL.Repositories.Concretes;
 using Hotel.Entity.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,16 @@ namespace Hotel.DAL.Implementations
     {
         public RoomRepository(HotelDbContext dbContext) : base(dbContext)
         {
+        }
+        public async Task AddRoomWithImageAsync(Room room, IFormFile image)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                await image.CopyToAsync(memoryStream);
+                room.Image = memoryStream.ToArray();
+            }
+
+            await AddAsync(room);
         }
     }
 }

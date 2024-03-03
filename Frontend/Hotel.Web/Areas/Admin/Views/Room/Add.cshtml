@@ -1,0 +1,40 @@
+﻿@model RoomPostDTO
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <label>Room number</label>
+    <input type="text" asp-for="RoomNumber" class="form-control" />
+    <span asp-validation-for="RoomNumber" class="text-danger"></span>
+    <br />
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+    <label>Price</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+    <br />
+    <label>Image</label>
+    <input type="file" asp-for="ImageFile" accept="image/*">
+    <br />
+    <label>Description</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>  
+    <br />
+    <label>Bed count</label>
+    <input type="text" asp-for="BedCount" class="form-control" />
+    <span asp-validation-for="BedCount" class="text-danger"></span>
+    <br />
+    <label>Bath count</label>
+    <input type="text" asp-for="BathCount" class="form-control" />
+    <span asp-validation-for="BathCount" class="text-danger"></span>
+    <br />
+    <label>Wifi</label>
+    <input type="text" asp-for="Wifi" class="form-control" />
+    <span asp-validation-for="Wifi" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary">Add Room</button>
+</form>
