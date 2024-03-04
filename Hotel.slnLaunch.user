@@ -4,13 +4,11 @@
     "Projects": [
       {
         "Name": "ApiConsume\\Hotel.WebApi\\Hotel.WebApi.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Action": "Start"
       },
       {
         "Name": "Frontend\\Hotel.Web\\Hotel.Web.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Action": "Start"
       }
     ]
   }

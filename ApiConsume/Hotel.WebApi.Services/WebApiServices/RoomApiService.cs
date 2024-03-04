@@ -47,13 +47,20 @@ namespace Hotel.WebApi.Services.WebApiServices
         {
             using var content = new MultipartFormDataContent();
             using var imageContent = new StreamContent(image.OpenReadStream());
-            imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
-            content.Add(imageContent, "image", image.FileName);
-            content.Add(new StringContent(JsonConvert.SerializeObject(room), Encoding.UTF8, "application/json"), "model");
+            imageContent.Headers.ContentType = new MediaTypeHeaderValue(image.ContentType);
+            content.Add(imageContent, "ImageFile", image.FileName);
+            content.Add(new StringContent(room.RoomNumber), "RoomNumber");
+            content.Add(new StringContent(room.Price.ToString()), "Price");
+            content.Add(new StringContent(room.Title.ToString()), "Title");
+            content.Add(new StringContent(room.BedCount.ToString()), "BedCount");
+            content.Add(new StringContent(room.BathCount.ToString()), "BathCount");
+            content.Add(new StringContent(room.Description.ToString()), "Description");
+            content.Add(new StringContent(room.Wifi.ToString()), "Wifi");
 
-            var response = await _httpClient.PostAsync("/api/Room/add", content);
+            var response = await _httpClient.PostAsync("api/Room/add", content);
             response.EnsureSuccessStatusCode();
         }
+
 
         public async Task AddRangeRoomAsync(List<Room> rooms)
         {

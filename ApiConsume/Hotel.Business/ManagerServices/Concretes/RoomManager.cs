@@ -28,7 +28,7 @@ namespace Hotel.Business.ManagerServices.Concretes
                 return new ErrorResult("Image size cannot be more than 500KB.");
             }
 
-            var allowedContentTypes = new[] { "image/jpeg", "image/png" };
+            var allowedContentTypes = new[] { "image/jpeg", "image/png", "image/jpg" };
             if (!allowedContentTypes.Contains(image.ContentType))
             {
                 return new ErrorResult("Invalid image format. Only .jpg and .png formats are allowed.");
