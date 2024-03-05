@@ -1,4 +1,6 @@
-﻿using Hotel.Business.ManagerServices.Abstracts;
+﻿using AutoMapper;
+using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Entity.DTOs.Service;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,16 +11,18 @@ namespace Hotel.WebApi.Controllers
     [ApiController]
     public class ServiceController : ControllerBase
     {
-        readonly IServiceService _service;
-        public ServiceController(IServiceService service)
+        readonly IServiceService _serviceService;
+        readonly IMapper _mapper;
+        public ServiceController(IServiceService serviceService, IMapper mapper)
         {
-            _service = service;
+            _serviceService = serviceService;
+            _mapper = mapper;
         }
 
         [HttpGet("getall")]
         public async Task<IActionResult> GetAllServices()
         {
-            var result = await _service.GetAllAsync();
+            var result = await _serviceService.GetAllAsync();
             if (result.Success)
             {
                 return Ok(result);
@@ -30,7 +34,7 @@ namespace Hotel.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetService(int id)
         {
-            var result = await _service.GetByIdAsync(id);
+            var result = await _serviceService.GetByIdAsync(id);
             if (result.Success)
             {
                 return Ok(result);
@@ -40,9 +44,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddService(Service service)
+        public async Task<IActionResult> AddService(ServicePostDTO model)
         {
-            var result = await _service.AddAsync(service);
+            var service = _mapper.Map<Service>(model);
+            var result = await _serviceService.AddAsync(service);
             if (result.Success)
             {
                 return Ok(result);
@@ -52,9 +57,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("addrange")]
-        public async Task<IActionResult> AddRangeService(List<Service> services)
+        public async Task<IActionResult> AddRangeService(List<ServicePostDTO> model)
         {
-            var result = await _service.AddRangeAsync(services);
+            var services = _mapper.Map<List<Service>>(model);
+            var result = await _serviceService.AddRangeAsync(services);
             if (result.Success)
             {
                 return Ok(result);
@@ -64,9 +70,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateService(Service service)
+        public IActionResult UpdateService(ServiceGetPutDTO model)
         {
-            var result = _service.Update(service);
+            var service = _mapper.Map<Service>(model);
+            var result = _serviceService.Update(service);
             if (result.Success)
             {
                 return Ok(result);
@@ -76,9 +83,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<Service> services)
+        public IActionResult UpdateRange(List<ServiceGetPutDTO> models)
         {
-            var result = _service.UpdateRange(services);
+            var services = _mapper.Map<List<Service>>(models);
+            var result = _serviceService.UpdateRange(services);
             if (result.Success)
             {
                 return Ok(result);
@@ -90,8 +98,8 @@ namespace Hotel.WebApi.Controllers
         [HttpDelete("delete")]
         public IActionResult DeleteService(int id)
         {
-            var service = _service.GetByIdAsync(id).Result.Data;
-            var result = _service.Delete(service);
+            var service = _serviceService.GetByIdAsync(id).Result.Data;
+            var result = _serviceService.Delete(service);
             if (result.Success)
             {
                 return Ok(result);
@@ -103,8 +111,8 @@ namespace Hotel.WebApi.Controllers
         [HttpDelete("deleterange")]
         public IActionResult DeleteRangeService(List<int> ids)
         {
-            var services = ids.Select(x => _service.GetByIdAsync(x).Result.Data).ToList();
-            var result = _service.DeleteRange(services);
+            var services = ids.Select(id => _serviceService.GetByIdAsync(id).Result.Data).ToList();
+            var result = _serviceService.DeleteRange(services);
             if (result.Success)
             {
                 return Ok(result);
@@ -116,8 +124,8 @@ namespace Hotel.WebApi.Controllers
         [HttpDelete("destroy")]
         public IActionResult DestroyService(int id)
         {
-            var service = _service.GetByIdAsync(id).Result.Data;
-            var result = _service.Destroy(service);
+            var service = _serviceService.GetByIdAsync(id).Result.Data;
+            var result = _serviceService.Destroy(service);
             if (result.Success)
             {
                 return Ok(result);
@@ -129,8 +137,8 @@ namespace Hotel.WebApi.Controllers
         [HttpDelete("destroyrange")]
         public IActionResult DestroyRangeService(List<int> ids)
         {
-            var services = ids.Select(x => _service.GetByIdAsync(x).Result.Data).ToList();
-            var result = _service.DestroyRange(services);
+            var services = ids.Select(x => _serviceService.GetByIdAsync(x).Result.Data).ToList();
+            var result = _serviceService.DestroyRange(services);
             if (result.Success)
             {
                 return Ok(result);

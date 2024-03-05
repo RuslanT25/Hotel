@@ -1,5 +1,4 @@
-﻿
-@model HomeVM
+﻿@model HomeVM
 @{
 }
 
@@ -16,13 +15,13 @@
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_BookingPartial.cshtml")
 
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml",Model.Abouts)
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml", Model.Abouts)
 
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_RoomPartial.cshtml",Model.Rooms)
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_RoomPartial.cshtml", Model.Rooms)
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_VideoPartial.cshtml")
 
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_ServicePartial.cshtml")
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_ServicePartial.cshtml", Model.Services)
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_TestimonialPartial.cshtml")
 

@@ -7,5 +7,6 @@ namespace Hotel.Web.ViewModels
     {
         public List<About> Abouts { get; set; }
         public List<Room> Rooms { get; set; }
+        public List<Service> Services { get; set; }
     }
 }

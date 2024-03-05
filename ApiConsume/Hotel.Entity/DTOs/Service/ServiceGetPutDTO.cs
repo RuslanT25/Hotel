@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Hotel.Entity.DTOs.Service
 {
-    public class ServiceGetPutDTO
+    public class ServiceGetPutDTO : ServiceBaseDTO
     {
         public int Id { get; set; }
-        public string Icon { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
     }
 }
