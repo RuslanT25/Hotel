@@ -1,4 +1,6 @@
-﻿using Hotel.Business.ManagerServices.Abstracts;
+﻿using AutoMapper;
+using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Entity.DTOs.Testimonial;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +12,11 @@ namespace Hotel.WebApi.Controllers
     public class TestimonialController : ControllerBase
     {
         readonly ITestimonialService _testimonialService;
-        public TestimonialController(ITestimonialService service)
+        readonly IMapper _mapper;
+        public TestimonialController(ITestimonialService testimonialService, IMapper mapper)
         {
-            _testimonialService = service;
+            _testimonialService = testimonialService;
+            _mapper = mapper;
         }
 
         [HttpGet("getall")]
@@ -40,9 +44,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddTestimonial(Testimonial testimonial)
+        public async Task<IActionResult> AddTestimonial([FromForm] TestimonialPostDTO model)
         {
-            var result = await _testimonialService.AddAsync(testimonial);
+            var testimonial = _mapper.Map<Testimonial>(model);
+            var result = await _testimonialService.AddTestimonialWithImageAsync(testimonial, model.ImageFile);
             if (result.Success)
             {
                 return Ok(result);
@@ -52,8 +57,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("addrange")]
-        public async Task<IActionResult> AddRangeTestimonial(List<Testimonial> testimonials)
+        public async Task<IActionResult> AddRangeTestimonial(List<TestimonialPostDTO> model)
         {
+            var testimonials = _mapper.Map<List<Testimonial>>(model);
             var result = await _testimonialService.AddRangeAsync(testimonials);
             if (result.Success)
             {
@@ -64,8 +70,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateTestimonial(Testimonial testimonial)
+        public IActionResult UpdateTestimonial(TestimonialGetPutDTO model)
         {
+            var testimonial = _mapper.Map<Testimonial>(model);
             var result = _testimonialService.Update(testimonial);
             if (result.Success)
             {
@@ -76,8 +83,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<Testimonial> testimonials)
+        public IActionResult UpdateRange(List<TestimonialGetPutDTO> models)
         {
+            var testimonials = _mapper.Map<List<Testimonial>>(models);
             var result = _testimonialService.UpdateRange(testimonials);
             if (result.Success)
             {

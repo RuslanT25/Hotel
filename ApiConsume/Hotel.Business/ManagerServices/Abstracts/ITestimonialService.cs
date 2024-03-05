@@ -1,4 +1,6 @@
-﻿using Hotel.Entity.Models;
+﻿using Hotel.Business.Results;
+using Hotel.Entity.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +11,6 @@ namespace Hotel.Business.ManagerServices.Abstracts
 {
     public interface ITestimonialService : IBaseService<Testimonial>
     {
+        Task<Result> AddTestimonialWithImageAsync(Testimonial testimonial, IFormFile image);
     }
 }

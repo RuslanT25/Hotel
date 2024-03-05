@@ -37,6 +37,5 @@ namespace Hotel.Business.ManagerServices.Concretes
             await _roomRepository.AddRoomWithImageAsync(room, image);
             return new SuccessResult(Messages<Room>.Entity<Room>.Add());
         }
-
     }
 }

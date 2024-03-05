@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.Models
+namespace Hotel.Entity.DTOs.Testimonial
 {
-    public class Testimonial : BaseEntity
+    public class TestimonialGetPutDTO
     {
         public string Name { get; set; }
         public string Title { get; set; }

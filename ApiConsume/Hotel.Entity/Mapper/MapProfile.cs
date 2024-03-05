@@ -4,6 +4,7 @@ using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.DTOs.Service;
 using Hotel.Entity.DTOs.Staff;
+using Hotel.Entity.DTOs.Testimonial;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 
@@ -18,16 +19,21 @@ namespace Hotel.Entity.Mapper
             .ReverseMap();
             CreateMap<Room, RoomGetPutDTO>().ReverseMap();
 
-            CreateMap<Service,ServicePostDTO>().ReverseMap();
-            CreateMap<Service,ServiceGetPutDTO>().ReverseMap();
+            CreateMap<Service, ServicePostDTO>().ReverseMap();
+            CreateMap<Service, ServiceGetPutDTO>().ReverseMap();
 
-            CreateMap<Staff,StaffPostDTO>().ReverseMap();
-            CreateMap<Staff,StaffGetPutDTO>().ReverseMap();
+            CreateMap<Staff, StaffPostDTO>().ReverseMap();
+            CreateMap<Staff, StaffGetPutDTO>().ReverseMap();
 
-            CreateMap<AppUser,RegisterPostDTO>().ReverseMap();
+            CreateMap<AppUser, RegisterPostDTO>().ReverseMap();
 
-            CreateMap<About,AboutPostDTO>().ReverseMap();
-            CreateMap<About,AboutPutDTO>().ReverseMap();
+            CreateMap<About, AboutPostDTO>().ReverseMap();
+            CreateMap<About, AboutPutDTO>().ReverseMap();
+
+            CreateMap<TestimonialPostDTO, Testimonial>()
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => ConvertToBytes(src.ImageFile)))
+                .ReverseMap();
+            CreateMap<Testimonial, TestimonialGetPutDTO>().ReverseMap();
         }
 
         private byte[] ConvertToBytes(IFormFile imageFile)
