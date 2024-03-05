@@ -1,4 +1,4 @@
-﻿@model List<Testimonial>
+﻿@model List<TestimonialGetPutDTO>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
@@ -7,24 +7,36 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Testimonial Image</th>
-        <th>Testimonial Name</th>
-        <th>Testimonial Title</th>
-        <th>Delete</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
         <th>Update</th>
+        <th>Delete</th>
+        <th>Destroy</th>
+        <th>Details</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <th>@item.Id</th>
-            @* <th>@item.Image</th> *@
-            <th>@item.Name</th>
-            <th>@item.Title</th>
-            <th><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></th>
-            <th><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning">Update</a></th>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>
+                @if (item.Image != null)
+                {
+                    var base64 = Convert.ToBase64String(item.Image);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img src="@imgSrc" width="80" height="70" />
+                }
+            </td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info">Update</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-warning">Delete</a></td>
+            <td><a asp-action="Destroy" asp-route-id="@item.Id" class="btn btn-danger">Destroy</a></td>
+            <td><a href="#" class="btn btn-dark">Details</a></td>
         </tr>
     }
 </table>
 
-<a href="/Testimonial/Add/" class="btn btn-info">New Testimonial</a>
-
+<a href="/admin/Testimonial/Add/" class="btn btn-info">New Testimonial</a>

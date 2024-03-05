@@ -11,23 +11,26 @@ namespace Hotel.Web.Controllers
         readonly AboutApiService _aboutApiService;
         readonly RoomApiService _roomApiService;
         readonly ServiceApiService _serviceApiService;
-        public HomeController(AboutApiService aboutApiService, RoomApiService roomApiService, ServiceApiService serviceApiService)
+        readonly TestimonialApiService _testimonialApiService;
+        public HomeController(AboutApiService aboutApiService, RoomApiService roomApiService, ServiceApiService serviceApiService, TestimonialApiService testimonialApiService)
         {
             _aboutApiService = aboutApiService;
             _roomApiService = roomApiService;
             _serviceApiService = serviceApiService;
-
+            _testimonialApiService = testimonialApiService;
         }
         public async Task<IActionResult> Index()
         {
             List<About> abouts= await _aboutApiService.GetAllAboutsAsync();
             List<Room> rooms = await _roomApiService.GetAllRoomsAsync();
             List<Service> services = await _serviceApiService.GetAllServices();
+            List<Testimonial> testimonials = await _testimonialApiService.GetAllTestimonialsAsync();
             HomeVM homeVM = new()
             {
                 Abouts = abouts,
                 Rooms = rooms,
-                Services = services
+                Services = services,
+                Testimonials = testimonials
             };
 
             return View(homeVM);

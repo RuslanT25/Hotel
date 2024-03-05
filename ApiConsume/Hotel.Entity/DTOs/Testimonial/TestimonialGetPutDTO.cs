@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Hotel.Entity.DTOs.Testimonial
 {
-    public class TestimonialGetPutDTO
+    public class TestimonialGetPutDTO : TestimonialBaseDTO
     {
-        public string Name { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public byte[] Image { get; set; }
+        public int Id { get; set; }
+        public byte[]? Image { get; set; }
     }
 }

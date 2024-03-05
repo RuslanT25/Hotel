@@ -8,6 +8,8 @@ using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
 
 namespace Hotel.WebApi.Services.WebApiServices
 {
@@ -45,9 +47,17 @@ namespace Hotel.WebApi.Services.WebApiServices
             return responseData.Data ?? throw new Exception("Testimonial is empty");
         }
 
-        public async Task AddTestimonialAsync(Testimonial testimonial)
+        public async Task AddTestimonialAsync(Testimonial testimonial,IFormFile image)
         {
-            var response = await _httpClient.PostAsJsonAsync("/api/Testimonial/add", testimonial);
+            using var content = new MultipartFormDataContent();
+            using var imageContent = new StreamContent(image.OpenReadStream());
+            imageContent.Headers.ContentType = new MediaTypeHeaderValue(image.ContentType);
+            content.Add(imageContent, "ImageFile", image.FileName);
+            content.Add(new StringContent(testimonial.Title), "Title");
+            content.Add(new StringContent(testimonial.Description.ToString()), "Description");
+            content.Add(new StringContent(testimonial.Name.ToString()), "Name");
+
+            var response = await _httpClient.PostAsync("api/Testimonial/add", content);
             response.EnsureSuccessStatusCode();
         }
 

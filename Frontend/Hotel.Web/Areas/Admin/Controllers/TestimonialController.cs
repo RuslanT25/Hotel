@@ -1,4 +1,7 @@
-﻿using Hotel.Entity.Models;
+﻿using AutoMapper;
+using Hotel.Entity.DTOs.Testimonial;
+using Hotel.Entity.Models;
+using Hotel.Web.Validations.Testimonial;
 using Hotel.WebApi.Services.WebApiServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,45 +11,73 @@ namespace Hotel.Web.Areas.Admin.Controllers
     public class TestimonialController : Controller
     {
         readonly TestimonialApiService _testimonialApiService;
-        public TestimonialController(TestimonialApiService testimonialApiService)
+        readonly TestimonialValidator _validator;
+        readonly IMapper _mapper;
+        public TestimonialController(TestimonialApiService testimonialApiService, TestimonialValidator validations, IMapper mapper)
         {
             _testimonialApiService = testimonialApiService;
+            _validator = validations;
+            _mapper = mapper;
         }
         public async Task<IActionResult> Index()
         {
             var testimonials = await _testimonialApiService.GetAllTestimonialsAsync();
+            var testimonialDTOs = _mapper.Map<List<TestimonialGetPutDTO>>(testimonials);
 
-            return View(testimonials);
+            return View(testimonialDTOs);
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public async Task<IActionResult> Add()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(Testimonial testimonial)
+        public async Task<IActionResult> Add(TestimonialPostDTO model)
         {
-            await _testimonialApiService.AddTestimonialAsync(testimonial);
+            var testimonial = _mapper.Map<Testimonial>(model);
+            var result = _validator.Validate(model);
+            if (!result.IsValid)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View();
+            }
+
+            await _testimonialApiService.AddTestimonialAsync(testimonial, model.ImageFile);
 
             return RedirectToAction("Index");
         }
 
+
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var testimonial = await _testimonialApiService.GetTestimonialByIdAsync(id);
-
-            return View(testimonial);
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(Testimonial model)
+        public async Task<IActionResult> Update(TestimonialGetPutDTO model)
         {
-            await _testimonialApiService.UpdateTestimonialAsync(model);
+            var testimonial = _mapper.Map<Testimonial>(model);
+            var result = _validator.Validate(model);
+            if (!result.IsValid)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+
+                return View();
+            }
+
+            await _testimonialApiService.UpdateTestimonialAsync(testimonial);
 
             return RedirectToAction("Index");
         }
@@ -54,6 +85,13 @@ namespace Hotel.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _testimonialApiService.DeleteTestimonialAsync(id);
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Destroy(int id)
+        {
+            await _testimonialApiService.DestroyTestimonialAsync(id);
 
             return RedirectToAction("Index");
         }
