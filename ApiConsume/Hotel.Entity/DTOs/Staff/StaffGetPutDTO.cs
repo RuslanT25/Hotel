@@ -9,5 +9,6 @@ namespace Hotel.Entity.DTOs.Staff
     public class StaffGetPutDTO : StaffBaseDTO
     {
         public int Id { get; set; }
+        public byte[] Image { get; set; }
     }
 }

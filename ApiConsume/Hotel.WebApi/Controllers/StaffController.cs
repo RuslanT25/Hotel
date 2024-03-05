@@ -1,4 +1,7 @@
-﻿using Hotel.Business.ManagerServices.Abstracts;
+﻿using AutoMapper;
+using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Entity.DTOs.Staff;
+using Hotel.Entity.DTOs.Staff;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +13,11 @@ namespace Hotel.WebApi.Controllers
     public class StaffController : ControllerBase
     {
         readonly IStaffService _staffService;
-        public StaffController(IStaffService staffService)
+        readonly IMapper _mapper;
+        public StaffController(IStaffService staffService, IMapper mapper)
         {
             _staffService = staffService;
+            _mapper = mapper;
         }
 
         [HttpGet("getall")]
@@ -40,9 +45,10 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddStaff(Staff staff)
+        public async Task<IActionResult> AddStaff([FromForm] StaffPostDTO model)
         {
-            var result = await _staffService.AddAsync(staff);
+            var staff = _mapper.Map<Staff>(model);
+            var result = await _staffService.AddStaffWithImageAsync(staff, model.ImageFile);
             if (result.Success)
             {
                 return Ok(result);
@@ -52,8 +58,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPost("addrange")]
-        public async Task<IActionResult> AddRangeStaff(List<Staff> staff)
+        public async Task<IActionResult> AddRangeStaff(List<StaffPostDTO> model)
         {
+            var staff = _mapper.Map<List<Staff>>(model);
             var result = await _staffService.AddRangeAsync(staff);
             if (result.Success)
             {
@@ -64,8 +71,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateStaff(Staff staff)
+        public IActionResult UpdateStaff(StaffGetPutDTO model)
         {
+            var staff = _mapper.Map<Staff>(model);
             var result = _staffService.Update(staff);
             if (result.Success)
             {
@@ -76,8 +84,9 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<Staff> staff)
+        public IActionResult UpdateRange(List<StaffGetPutDTO> models)
         {
+            var staff = _mapper.Map<List<Staff>>(models);
             var result = _staffService.UpdateRange(staff);
             if (result.Success)
             {
@@ -87,7 +96,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("delete")]
         public IActionResult DeleteStaff(int id)
         {
             var staff = _staffService.GetByIdAsync(id).Result.Data;
@@ -103,7 +112,7 @@ namespace Hotel.WebApi.Controllers
         [HttpDelete("deleterange")]
         public IActionResult DeleteRangeStaff(List<int> ids)
         {
-            var staff = ids.Select(x => _staffService.GetByIdAsync(x).Result.Data).ToList();
+            var staff = ids.Select(id => _staffService.GetByIdAsync(id).Result.Data).ToList();
             var result = _staffService.DeleteRange(staff);
             if (result.Success)
             {
@@ -113,7 +122,7 @@ namespace Hotel.WebApi.Controllers
             return BadRequest(result);
         }
 
-        [HttpDelete("destroy/{id}")]
+        [HttpDelete("destroy")]
         public IActionResult DestroyStaff(int id)
         {
             var staff = _staffService.GetByIdAsync(id).Result.Data;

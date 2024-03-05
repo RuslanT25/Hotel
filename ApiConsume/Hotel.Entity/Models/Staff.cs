@@ -9,6 +9,7 @@ namespace Hotel.Entity.Models
     public class Staff : BaseEntity
     {
         public string Name { get; set; }
+        public byte[] Image { get; set; }
         public string Title { get; set; }
         public string Number { get; set; }
         public string? SocialMedia1 { get; set; }
