@@ -9,5 +9,6 @@ namespace Hotel.Web.ViewModels
         public List<Room> Rooms { get; set; }
         public List<Service> Services { get; set; }
         public List<Testimonial> Testimonials { get; set;}
+        public List<Staff> Staff { get; set; }
     }
 }

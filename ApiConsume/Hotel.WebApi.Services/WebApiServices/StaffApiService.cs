@@ -1,7 +1,9 @@
 ﻿using Hotel.Entity.Models;
 using Hotel.WebApi.Services.ApiResponseModels;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 
@@ -41,17 +43,29 @@ namespace Hotel.WebApi.Services.WebApiServices
             return responseData.Data ?? throw new Exception("Staff is empty");
         }
 
-        public async Task AddStaffAsync(Staff staff)
+        public async Task AddStaffAsync(Staff staff, IFormFile image)
         {
-            var response = await _httpClient.PostAsJsonAsync("/api/Staff/add", staff);
+            using var content = new MultipartFormDataContent();
+            using var imageContent = new StreamContent(image.OpenReadStream());
+            imageContent.Headers.ContentType = new MediaTypeHeaderValue(image.ContentType);
+            content.Add(imageContent, "ImageFile", image.FileName);
+            content.Add(new StringContent(staff.Name), "Name");
+            content.Add(new StringContent(staff.Title.ToString()), "Title");
+            content.Add(new StringContent(staff.Number.ToString()), "Number");
+            content.Add(new StringContent(staff.SocialMedia1.ToString()), "SocialMedia1");
+            content.Add(new StringContent(staff.SocialMedia2.ToString()), "SocialMedia2");
+            content.Add(new StringContent(staff.SocialMedia3.ToString()), "SocialMedia3");
+
+            var response = await _httpClient.PostAsync("api/Staff/add", content);
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task AddRangeStaffAsync(List<Staff> staffList)
+
+        public async Task AddRangeStaffAsync(List<Staff> staff)
         {
-            foreach (var staff in staffList)
+            foreach (var _staff in staff)
             {
-                var response = await _httpClient.PostAsJsonAsync("/api/Staff/addrange", staff);
+                var response = await _httpClient.PostAsJsonAsync("/api/Staff/addrange", _staff);
                 response.EnsureSuccessStatusCode();
             }
         }
@@ -78,7 +92,7 @@ namespace Hotel.WebApi.Services.WebApiServices
 
         public async Task DestroyStaffAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync($"/api/Staff/destroy/{id}");
+            var response = await _httpClient.DeleteAsync($"/api/Staff/destroy?id={id}");
             response.EnsureSuccessStatusCode();
         }
 

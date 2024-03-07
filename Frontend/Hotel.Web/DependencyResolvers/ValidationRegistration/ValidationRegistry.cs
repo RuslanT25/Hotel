@@ -10,6 +10,7 @@ namespace Hotel.Web.DependencyResolvers.ValidationRegistration
             services.AddValidatorsFromAssemblyContaining<Validations.About.AboutValidator>();
             services.AddValidatorsFromAssemblyContaining<Validations.Room.RoomValidator>();
             services.AddValidatorsFromAssemblyContaining<Validations.Service.ServiceValidator>();
+            services.AddValidatorsFromAssemblyContaining<Validations.Staff.StaffValidator>();
 
             return services;
         }

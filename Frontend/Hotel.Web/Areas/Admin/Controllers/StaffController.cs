@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Hotel.Entity.DTOs.Staff;
+using Hotel.Entity.DTOs.Staff;
 using Hotel.Entity.Models;
+using Hotel.Web.Validations.Staff;
 using Hotel.Web.Validations.Staff;
 using Hotel.WebApi.Services.WebApiServices;
 using Microsoft.AspNetCore.Mvc;
@@ -22,8 +24,9 @@ namespace Hotel.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var staff = await _staffApiService.GetAllStaffAsync();
+            var staffDTOs = _mapper.Map<List<StaffGetPutDTO>>(staff);
 
-            return View(staff);
+            return View(staffDTOs);
         }
 
         [HttpGet]
@@ -48,10 +51,11 @@ namespace Hotel.Web.Areas.Admin.Controllers
                 return View();
             }
 
-            await _staffApiService.AddStaffAsync(staff);
+            await _staffApiService.AddStaffAsync(staff, model.ImageFile);
 
             return RedirectToAction("Index");
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Update(int id)
