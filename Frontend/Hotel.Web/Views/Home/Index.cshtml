@@ -27,7 +27,14 @@
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_TeamPartial.cshtml", Model.Staff)
 
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_NewsPartial.cshtml")
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_NewsPartial.cshtml", Model.Subscribe)
 
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>

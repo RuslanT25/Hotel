@@ -4,6 +4,7 @@ using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.DTOs.Service;
 using Hotel.Entity.DTOs.Staff;
+using Hotel.Entity.DTOs.Subscribe;
 using Hotel.Entity.DTOs.Testimonial;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,9 @@ namespace Hotel.Entity.Mapper
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => ConvertToBytes(src.ImageFile)))
                 .ReverseMap();
             CreateMap<Testimonial, TestimonialGetPutDTO>().ReverseMap();
+
+            CreateMap<Subscribe,SubscribePostDTO>().ReverseMap();
+            CreateMap<Subscribe,SubscribeGetPutDTO>().ReverseMap();
         }
 
         private byte[] ConvertToBytes(IFormFile imageFile)

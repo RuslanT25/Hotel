@@ -37,7 +37,7 @@ namespace Hotel.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Add(AboutPostDTO model)
         {
             var about = _mapper.Map<About>(model);
-            var result = _validator.Validate(model);
+            var result = await _validator.ValidateAsync(model);
             if (!result.IsValid)
             {
                 foreach (var error in result.Errors)
