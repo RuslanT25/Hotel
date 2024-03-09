@@ -1,19 +1,17 @@
 ﻿@model HomeVM
 @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 <html lang="en">
-
-@await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_HeadPartial.cshtml")
 
 <body>
     <div class="container-xxl bg-white p-0">
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_SpinnerPartial.cshtml")
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_SliderPartial.cshtml")
-
-        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_BookingPartial.cshtml")
 
         @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_AboutPartial.cshtml", Model.Abouts)
 

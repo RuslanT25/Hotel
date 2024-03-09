@@ -1,0 +1,33 @@
+﻿
+@model BookingVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container-xxl bg-white p-0">    
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Booking/_PageHeaderPartial.cshtml")
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Booking/_BookingPartial.cshtml")
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+        <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+        </div>
+        }
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_NewsPartial.cshtml", Model.Subscribe)
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+        @await Html.PartialAsync("~/Views/Shared/PartialViews/Home/_ScriptPartial.cshtml")
+    </div>
+</body>
+</html>
+
