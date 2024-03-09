@@ -34,6 +34,9 @@ namespace Hotel.Business.DependencyResolvers.Autofac
 
             builder.RegisterType<AboutManager>().As<IAboutService>().SingleInstance();
             builder.RegisterType<AboutRepository>().As<IAboutRepository>().SingleInstance();
+
+            builder.RegisterType<BookingManager>().As<IBookingService>().SingleInstance();
+            builder.RegisterType<BookingRepository>().As<IBookingRepository>().SingleInstance();
         }
     }
 }

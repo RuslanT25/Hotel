@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Hotel.Entity.DTOs.About;
+using Hotel.Entity.DTOs.Booking;
 using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.DTOs.Service;
@@ -36,8 +37,11 @@ namespace Hotel.Entity.Mapper
                 .ReverseMap();
             CreateMap<Testimonial, TestimonialGetPutDTO>().ReverseMap();
 
-            CreateMap<Subscribe,SubscribePostDTO>().ReverseMap();
-            CreateMap<Subscribe,SubscribeGetPutDTO>().ReverseMap();
+            CreateMap<Subscribe, SubscribePostDTO>().ReverseMap();
+            CreateMap<Subscribe, SubscribeGetPutDTO>().ReverseMap();
+
+            CreateMap<Booking, BookingPostDTO>().ReverseMap();
+            CreateMap<Booking, BookingGetPutDTO>().ReverseMap();
         }
 
         private byte[] ConvertToBytes(IFormFile imageFile)

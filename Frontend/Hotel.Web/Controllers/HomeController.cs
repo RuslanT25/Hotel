@@ -59,7 +59,6 @@ namespace Hotel.Web.Controllers
         }
 
         [HttpPost]
-        [HttpPost]
         public async Task<IActionResult> Subscribe(SubscribePostDTO model)
         {
             var subscribe = _mapper.Map<Subscribe>(model);
