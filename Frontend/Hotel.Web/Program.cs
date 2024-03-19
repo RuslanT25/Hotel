@@ -1,6 +1,8 @@
 
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Hotel.Business.DependencyResolvers;
+using Hotel.Business.DependencyResolvers.Autofac;
 using Hotel.DAL.ApplicationContext;
 using Hotel.Entity.Mapper;
 using Hotel.Entity.Models;
@@ -27,9 +29,16 @@ namespace Hotel.Web
                 });
             builder.Services.AddAutoMapper(typeof(MapProfile));
             builder.Services.AddAllValidators();
+            builder.Services.AddDbContextService();
             builder.Services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<HotelDbContext>()
                 .AddDefaultTokenProviders();
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireUppercase = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireNonAlphanumeric = false;
+            });
 
             var app = builder.Build();
 

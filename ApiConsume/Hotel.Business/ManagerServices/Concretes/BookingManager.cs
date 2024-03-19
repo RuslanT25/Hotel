@@ -1,6 +1,8 @@
 ﻿using Hotel.Business.ManagerServices.Abstracts;
+using Hotel.Business.Results;
 using Hotel.DAL.Repositories.Abstracts;
 using Hotel.DAL.Repositories.Concretes;
+using Hotel.Entity.DTOs.Booking;
 using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
@@ -17,5 +19,22 @@ namespace Hotel.Business.ManagerServices.Concretes
         {
             _bookingRepository = bookingRepository;
         }
+
+        public async Task<bool> IsBookingAvailableAsync(Booking newBooking)
+        {
+            var bookings = await _bookingRepository.GetBookingsByRoomIdAsync(newBooking.RoomId);
+            return !bookings.Any(b => b.Checkin < newBooking.CheckOut && b.CheckOut > newBooking.Checkin);
+        }
+
+        public override async Task<Result> AddAsync(Booking booking)
+        {
+            if (!await IsBookingAvailableAsync(booking))
+            {
+                return new ErrorResult("The room is already booked during this period.");
+            }
+
+            return await base.AddAsync(booking);
+        }
+
     }
 }

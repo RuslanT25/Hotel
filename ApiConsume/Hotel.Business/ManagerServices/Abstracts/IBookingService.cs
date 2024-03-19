@@ -1,4 +1,5 @@
-﻿using Hotel.Entity.Models;
+﻿using Hotel.Entity.DTOs.Booking;
+using Hotel.Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace Hotel.Business.ManagerServices.Abstracts
 {
     public interface IBookingService : IBaseService<Booking>
     {
+        public Task<bool> IsBookingAvailableAsync(Booking newBooking);
     }
 }

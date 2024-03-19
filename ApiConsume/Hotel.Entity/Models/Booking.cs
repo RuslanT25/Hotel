@@ -15,7 +15,7 @@ namespace Hotel.Entity.Models
         public int AdultCount { get; set; }
         public int Children { get; set; }
         public int RoomId { get; set; }
-        public virtual Room Room { get; set; }
+        public virtual Room? Room { get; set; }
         public string SpecialRequest { get; set; }
         public BookingStatus Status { get; set; }
     }

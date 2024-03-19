@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.Entity.DTOs.Booking
 {
-    public class BookingBaseDTO
+    public abstract class BookingBaseDTO
     {
         public string FullName { get; set; }
         public string Mail { get; set; }
@@ -16,7 +16,7 @@ namespace Hotel.Entity.DTOs.Booking
         public int AdultCount { get; set; }
         public int Children { get; set; }
         public int RoomId { get; set; }
-        public virtual Models.Room Room { get; set; }
+        public virtual Models.Room? Room { get; set; }
         public string SpecialRequest { get; set; }
         public BookingStatus Status { get; set; }
     }

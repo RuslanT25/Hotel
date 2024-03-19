@@ -9,5 +9,6 @@ namespace Hotel.DAL.Repositories.Abstracts
 {
     public interface IBookingRepository : IGenericRepository<Booking>
     {
+        public Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId);
     }
 }
