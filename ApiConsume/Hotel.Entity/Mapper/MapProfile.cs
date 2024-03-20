@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Hotel.Entity.DTOs.About;
 using Hotel.Entity.DTOs.Booking;
+using Hotel.Entity.DTOs.Login;
 using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.DTOs.Service;
@@ -27,8 +28,6 @@ namespace Hotel.Entity.Mapper
             CreateMap<Staff, StaffPostDTO>().ReverseMap();
             CreateMap<Staff, StaffGetPutDTO>().ReverseMap();
 
-            CreateMap<AppUser, RegisterPostDTO>().ReverseMap();
-
             CreateMap<About, AboutPostDTO>().ReverseMap();
             CreateMap<About, AboutPutDTO>().ReverseMap();
 
@@ -42,6 +41,9 @@ namespace Hotel.Entity.Mapper
 
             CreateMap<Booking, BookingPostDTO>().ReverseMap();
             CreateMap<Booking, BookingGetPutDTO>().ReverseMap();
+
+            CreateMap<AppUser, RegisterPostDTO>().ReverseMap();
+            CreateMap<AppUser, LoginPostDTO>().ReverseMap();
         }
 
         private byte[] ConvertToBytes(IFormFile imageFile)

@@ -9,10 +9,12 @@ namespace Hotel.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class RegisterController : Controller
     {
-        private readonly UserManager<AppUser> _userManager;
-        public RegisterController(UserManager<AppUser> userManager)
+        readonly UserManager<AppUser> _userManager;
+        readonly RegisterValidator _registerValidator;
+        public RegisterController(UserManager<AppUser> userManager, RegisterValidator registerValidator)
         {
             _userManager = userManager;
+            _registerValidator = registerValidator;
         }
         public IActionResult Index()
         {
@@ -22,8 +24,7 @@ namespace Hotel.Web.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(RegisterPostDTO registerPostDTO)
         {
-            var validator = new RegisterValidator();
-            var validationResult = validator.Validate(registerPostDTO);
+            var validationResult = await _registerValidator.ValidateAsync(registerPostDTO);
 
             if (!validationResult.IsValid)
             {
@@ -31,14 +32,15 @@ namespace Hotel.Web.Areas.Admin.Controllers
                 {
                     ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
-            }
 
-            if (!ModelState.IsValid) { return View(); }
+                return View();  
+            }
 
             var appUser = new AppUser()
             {
                 Name = registerPostDTO.Name,
                 Surname = registerPostDTO.Surname,
+                UserName = registerPostDTO.Email,
                 Email = registerPostDTO.Email
             };
 
