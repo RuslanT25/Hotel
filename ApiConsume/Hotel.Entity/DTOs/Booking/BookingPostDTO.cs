@@ -8,5 +8,6 @@ namespace Hotel.Entity.DTOs.Booking
 {
     public class BookingPostDTO : BookingBaseDTO
     {
+        public List<int>? GuestsIds { get; set; }
     }
 }

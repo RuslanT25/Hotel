@@ -9,5 +9,6 @@ namespace Hotel.Entity.DTOs.Booking
     public class BookingGetPutDTO : BookingBaseDTO
     {
         public int Id { get; set; }
+        public List<string> Guests { get; set; }
     }
 }
