@@ -20,7 +20,8 @@ namespace Hotel.WebApi.Services.DependencyResolvers.Autofac
         typeof(AboutApiService),
         typeof(RoomApiService),
         typeof(SubscribeApiService),
-        typeof(BookingApiService)
+        typeof(BookingApiService),
+        typeof(ContactApiService)
             };
 
             foreach (var serviceType in serviceTypes)
