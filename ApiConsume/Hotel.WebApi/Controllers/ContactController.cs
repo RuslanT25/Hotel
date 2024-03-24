@@ -46,6 +46,7 @@ namespace Hotel.WebApi.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddContact(ContactPostDTO model)
         {
+            model.Date = DateTime.Now;
             var contact = _mapper.Map<Contact>(model);
             var result = await _contactService.AddAsync(contact);
             if (result.Success)

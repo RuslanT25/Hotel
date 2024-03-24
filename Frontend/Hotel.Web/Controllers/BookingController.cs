@@ -65,11 +65,6 @@ namespace Hotel.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Subscribe()
-        {
-            return View();
-        }
-
         [HttpPost]
         public async Task<IActionResult> Subscribe(SubscribePostDTO model)
         {

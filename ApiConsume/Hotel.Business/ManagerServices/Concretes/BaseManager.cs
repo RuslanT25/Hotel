@@ -34,6 +34,7 @@ namespace Hotel.Business.ManagerServices.Concretes
 
         public virtual async Task<Result> AddAsync(T entity)
         {
+            entity.CreatedDate = DateTime.Now;
             var result = await _genericRepository.AnyAsync(x => x.Id == entity.Id);
             if (!result)
             {
