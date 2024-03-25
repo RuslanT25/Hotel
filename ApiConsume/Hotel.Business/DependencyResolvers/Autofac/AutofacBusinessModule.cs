@@ -40,6 +40,9 @@ namespace Hotel.Business.DependencyResolvers.Autofac
 
             builder.RegisterType<ContactManager>().As<IContactService>().SingleInstance();
             builder.RegisterType<ContactRepository>().As<IContactRepository>().SingleInstance();
+
+            builder.RegisterType<SendMessageManager>().As<ISendMessageService>().SingleInstance();
+            builder.RegisterType<SendMessageRepository>().As<ISendMessageRepository>().SingleInstance();
         }
     }
 }

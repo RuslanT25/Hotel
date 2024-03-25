@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Hotel.Business.ManagerServices.Abstracts;
-using Hotel.Entity.DTOs.Contact;
+using Hotel.Entity.DTOs.Contact.Inbox;
 using Hotel.Entity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +19,7 @@ namespace Hotel.WebApi.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("getall")]
         public async Task<IActionResult> GetAllContacts()
         {
             var result = await _contactService.GetAllAsync();

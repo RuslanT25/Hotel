@@ -1,4 +1,4 @@
-﻿using Hotel.Entity.DTOs.Contact;
+﻿using Hotel.Entity.DTOs.Contact.Inbox;
 using Hotel.Entity.DTOs.Subscribe;
 
 namespace Hotel.Web.ViewModels

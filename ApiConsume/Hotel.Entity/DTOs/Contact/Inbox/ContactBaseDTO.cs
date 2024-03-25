@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.DTOs.Contact
+namespace Hotel.Entity.DTOs.Contact.Inbox
 {
     public class ContactBaseDTO
     {
@@ -13,6 +13,6 @@ namespace Hotel.Entity.DTOs.Contact
         public string Email { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
-        public DateTime Date {  get; set; }
+        public DateTime Date { get; set; }
     }
 }

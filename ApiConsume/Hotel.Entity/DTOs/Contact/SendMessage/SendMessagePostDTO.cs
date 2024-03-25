@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.DTOs.Contact
+namespace Hotel.Entity.DTOs.Contact.SendMessage
 {
-    public class ContactPostDTO : ContactBaseDTO
+    public class SendMessagePostDTO : SendMessageBaseDTO
     {
     }
 }

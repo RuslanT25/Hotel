@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hotel.Entity.DTOs.Contact
+namespace Hotel.Entity.DTOs.Contact.Inbox
 {
-    public class ContactGetPutDTO :ContactBaseDTO
+    public class ContactPostDTO : ContactBaseDTO
     {
-        public int Id { get; set; }
     }
 }

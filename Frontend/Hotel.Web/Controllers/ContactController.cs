@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Hotel.Entity.DTOs.Contact;
+using Hotel.Entity.DTOs.Contact.Inbox;
 using Hotel.Entity.DTOs.Subscribe;
 using Hotel.Entity.Models;
 using Hotel.Web.Validations.Subscribe;

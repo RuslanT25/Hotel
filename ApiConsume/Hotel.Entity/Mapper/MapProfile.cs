@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Hotel.Entity.DTOs.About;
 using Hotel.Entity.DTOs.Booking;
-using Hotel.Entity.DTOs.Contact;
+using Hotel.Entity.DTOs.Contact.Inbox;
+using Hotel.Entity.DTOs.Contact.SendMessage;
 using Hotel.Entity.DTOs.Login;
 using Hotel.Entity.DTOs.Register;
 using Hotel.Entity.DTOs.Room;
@@ -19,14 +20,16 @@ namespace Hotel.Entity.Mapper
         public MapProfile()
         {
             CreateMap<RoomPostDTO, Room>()
-            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => ConvertToBytes(src.ImageFile)))
-            .ReverseMap();
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => ConvertToBytes(src.ImageFile)))
+                .ReverseMap();
             CreateMap<Room, RoomGetPutDTO>().ReverseMap();
 
             CreateMap<Service, ServicePostDTO>().ReverseMap();
             CreateMap<Service, ServiceGetPutDTO>().ReverseMap();
 
-            CreateMap<Staff, StaffPostDTO>().ReverseMap();
+            CreateMap<StaffPostDTO, Staff>()
+                .ForMember(dest => dest.Image, opt => opt.MapFrom(src => ConvertToBytes(src.ImageFile)))
+                .ReverseMap();
             CreateMap<Staff, StaffGetPutDTO>().ReverseMap();
 
             CreateMap<About, AboutPostDTO>().ReverseMap();
@@ -46,8 +49,11 @@ namespace Hotel.Entity.Mapper
             CreateMap<AppUser, RegisterPostDTO>().ReverseMap();
             CreateMap<AppUser, LoginPostDTO>().ReverseMap();
 
-            CreateMap<Contact,ContactPostDTO>().ReverseMap();
-            CreateMap<Contact,ContactGetPutDTO>().ReverseMap();
+            CreateMap<Contact, ContactPostDTO>().ReverseMap();
+            CreateMap<Contact, ContactGetPutDTO>().ReverseMap();
+
+            CreateMap<SendMessage, SendMessagePostDTO>().ReverseMap();
+            CreateMap<SendMessage, SendMessageGetDTO>().ReverseMap();
         }
 
         private byte[] ConvertToBytes(IFormFile imageFile)
