@@ -92,7 +92,7 @@ namespace Hotel.WebApi.Services.WebApiServices
 
         public async Task DestroyTestimonialAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync($"/api/Testimonial/destroy/{id}");
+            var response = await _httpClient.DeleteAsync($"/api/Testimonial/destroy?id={id}");
             response.EnsureSuccessStatusCode();
         }
 
