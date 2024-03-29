@@ -71,7 +71,7 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("update")]
-        public IActionResult UpdateContact(ContactGetPutDTO model)
+        public IActionResult UpdateContact(ContactGetDTO model)
         {
             var contact = _mapper.Map<Contact>(model);
             var result = _contactService.Update(contact);
@@ -84,7 +84,7 @@ namespace Hotel.WebApi.Controllers
         }
 
         [HttpPut("updaterange")]
-        public IActionResult UpdateRange(List<ContactGetPutDTO> models)
+        public IActionResult UpdateRange(List<ContactGetDTO> models)
         {
             var contacts = _mapper.Map<List<Contact>>(models);
             var result = _contactService.UpdateRange(contacts);

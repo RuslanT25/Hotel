@@ -1,6 +1,6 @@
-﻿@model List<ContactGetDTO>
+﻿@model List<SendMessageGetDTO>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SendBox";
     Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
 }
 
@@ -15,12 +15,12 @@
 
                         @await Html.PartialAsync("_ContactCategoriesPartial");
                     </div>
-          
+
                     <div class="email-right-box">
                         <div role="toolbar" class="toolbar">
                             <div class="btn-group">
-                                <button aria-expanded="false"  class="btn btn-dark" type="button">
-                                    Messages <span class="caret m-l-5"></span>
+                                <button aria-expanded="false" class="btn btn-dark" type="button">
+                                    Sent Messages <span class="caret m-l-5"></span>
                                 </button>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                                         </div>
                                         <div class="col-mail col-mail-2">
                                             <div class="subject">
-                                                <p><b>@item.Name</b> <span style="padding-left: 80px;"><b>@item.Subject</b></span> - @item.Message.Substring(0, 70)</p>
+                                                <p><b>Reciever : </b> <b>@item.RecieverName</b> <span style="padding-left: 80px;"> <b>Subject : </b> @item.Message.Substring(0, 50)</span></p>
                                             </div>
 
                                             <div class="date">@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</div>

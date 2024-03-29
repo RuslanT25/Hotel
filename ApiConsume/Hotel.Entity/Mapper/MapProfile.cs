@@ -50,7 +50,7 @@ namespace Hotel.Entity.Mapper
             CreateMap<AppUser, LoginPostDTO>().ReverseMap();
 
             CreateMap<Contact, ContactPostDTO>().ReverseMap();
-            CreateMap<Contact, ContactGetPutDTO>().ReverseMap();
+            CreateMap<Contact, ContactGetDTO>().ReverseMap();
 
             CreateMap<SendMessage, SendMessagePostDTO>().ReverseMap();
             CreateMap<SendMessage, SendMessageGetDTO>().ReverseMap();

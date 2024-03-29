@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel.Entity.DTOs.Contact.Inbox
 {
-    public class ContactGetPutDTO : ContactBaseDTO
+    public class ContactGetDTO : ContactBaseDTO
     {
         public int Id { get; set; }
     }

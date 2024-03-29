@@ -22,7 +22,14 @@ namespace Hotel.Web.Areas.Admin.Controllers
         public async Task<IActionResult> Inbox()
         {
             var models = await _contactApiService.GetAllContactsAsync();
-            var messages = _mapper.Map<List<ContactGetPutDTO>>(models);
+            var messages = _mapper.Map<List<ContactGetDTO>>(models);
+
+            return View(messages);
+        }
+        public async Task<IActionResult> SendBox()
+        {
+            var models = await _sendMessageApiService.GetAllSendMessagesAsync();
+            var messages = _mapper.Map<List<SendMessageGetDTO>>(models);
 
             return View(messages);
         }
@@ -43,7 +50,7 @@ namespace Hotel.Web.Areas.Admin.Controllers
             try
             {
                 await _sendMessageApiService.AddSendMessageAsync(sendMessage);
-                return RedirectToAction("Inbox");
+                return RedirectToAction("SendBox");
             }
             catch (Exception)
             {
