@@ -27,6 +27,14 @@ namespace Hotel.Web.Areas.Admin.Controllers
             return View(messages);
         }
 
+        public async Task<IActionResult> InboxMessageDetails(int id)
+        {
+            var model = await _contactApiService.GetContactByIdAsync(id);
+            var message = _mapper.Map<ContactGetDTO>(model);
+
+            return View(message);
+        }
+
         public async Task<IActionResult> SendBox()
         {
             var models = await _sendMessageApiService.GetAllSendMessagesAsync();
@@ -37,7 +45,7 @@ namespace Hotel.Web.Areas.Admin.Controllers
 
         public async Task<IActionResult> SendboxMessageDetails(int id)
         {
-            var model= await _sendMessageApiService.GetSendMessageByIdAsync(id);
+            var model = await _sendMessageApiService.GetSendMessageByIdAsync(id);
             var message = _mapper.Map<SendMessageGetDTO>(model);
 
             return View(message);
