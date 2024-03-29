@@ -26,12 +26,21 @@ namespace Hotel.Web.Areas.Admin.Controllers
 
             return View(messages);
         }
+
         public async Task<IActionResult> SendBox()
         {
             var models = await _sendMessageApiService.GetAllSendMessagesAsync();
             var messages = _mapper.Map<List<SendMessageGetDTO>>(models);
 
             return View(messages);
+        }
+
+        public async Task<IActionResult> SendboxMessageDetails(int id)
+        {
+            var model= await _sendMessageApiService.GetSendMessageByIdAsync(id);
+            var message = _mapper.Map<SendMessageGetDTO>(model);
+
+            return View(message);
         }
 
         [HttpGet]
