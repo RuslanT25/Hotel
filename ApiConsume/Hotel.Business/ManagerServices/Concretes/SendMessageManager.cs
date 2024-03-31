@@ -17,5 +17,10 @@ namespace Hotel.Business.ManagerServices.Concretes
         {
             _messageRepository = sendMessageRepository;
         }
+
+        public int GetSendMesaageCount()
+        {
+            return _messageRepository.GetSendMessageCount();
+        }
     }
 }

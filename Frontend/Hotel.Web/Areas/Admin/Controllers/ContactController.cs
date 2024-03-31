@@ -2,12 +2,15 @@
 using Hotel.Entity.DTOs.Contact.Inbox;
 using Hotel.Entity.DTOs.Contact.SendMessage;
 using Hotel.Entity.Models;
+using Hotel.Web.ViewModels;
 using Hotel.WebApi.Services.WebApiServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ContactController : Controller
     {
         readonly ContactApiService _contactApiService;
@@ -23,6 +26,13 @@ namespace Hotel.Web.Areas.Admin.Controllers
         {
             var models = await _contactApiService.GetAllContactsAsync();
             var messages = _mapper.Map<List<ContactGetDTO>>(models);
+            var navBarModel = new ContactNavBarVM
+            {
+                ContactCount = await _contactApiService.GetContactCount(),
+                SendMessageCount = await _sendMessageApiService.GetSendMessageCount()
+            };
+
+            ViewBag.NavBarModel = navBarModel;
 
             return View(messages);
         }
@@ -39,6 +49,13 @@ namespace Hotel.Web.Areas.Admin.Controllers
         {
             var models = await _sendMessageApiService.GetAllSendMessagesAsync();
             var messages = _mapper.Map<List<SendMessageGetDTO>>(models);
+            var navBarModel = new ContactNavBarVM
+            {
+                SendMessageCount = await _sendMessageApiService.GetSendMessageCount(),
+                ContactCount = await _contactApiService.GetContactCount()
+            };
+
+            ViewBag.NavBarModel = navBarModel;
 
             return View(messages);
         }

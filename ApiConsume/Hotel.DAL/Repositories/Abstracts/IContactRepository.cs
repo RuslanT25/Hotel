@@ -9,5 +9,6 @@ namespace Hotel.DAL.Repositories.Abstracts
 {
     public interface IContactRepository : IGenericRepository<Contact>
     {
+        public int GetContactCount();
     }
 }

@@ -9,5 +9,6 @@ namespace Hotel.DAL.Repositories.Abstracts
 {
     public interface ISendMessageRepository : IGenericRepository<SendMessage>
     {
+        public int GetSendMessageCount();
     }
 }

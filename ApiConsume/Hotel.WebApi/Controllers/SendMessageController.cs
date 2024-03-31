@@ -146,5 +146,11 @@ namespace Hotel.WebApi.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpGet("getsendmessagecount")]
+        public IActionResult GetSendMessageCount()
+        {
+            return Ok(_sendMessageService.GetSendMesaageCount());
+        }
     }
 }

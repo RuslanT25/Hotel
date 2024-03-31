@@ -1,14 +1,15 @@
-﻿<div class="mail-list mt-4">
+﻿@model ContactNavBarVM
+<div class="mail-list mt-4">
     <a href="/admin/contact/inbox/" class="list-group-item border-0 text-primary p-r-0">
         <i class="fa fa-inbox font-18 align-middle mr-2"></i>
         <b>Inbox</b>
-        <span class="badge badge-primary badge-sm float-right m-t-5">198</span>
+        <span class="badge badge-primary badge-sm float-right m-t-5">@Model.ContactCount</span>
     </a>
 
     <a href="/admin/contact/sendbox" class="list-group-item text-info border-0 p-r-0">
         <i class="fa fa-paper-plane font-18 align-middle mr-2"></i>
         <b>Sent</b>
-        <span class="badge badge-success badge-sm float-right m-t-5">198</span>
+        <span class="badge badge-success badge-sm float-right m-t-5">@Model.SendMessageCount</span>
     </a>
 
     <a href="#" class="list-group-item text-danger border-0 p-r-0">

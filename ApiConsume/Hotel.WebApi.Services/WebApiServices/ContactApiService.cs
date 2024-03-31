@@ -33,6 +33,17 @@ namespace Hotel.WebApi.Services.WebApiServices
             return staff ?? throw new Exception("Contact is empty");
         }
 
+        public async Task<int> GetContactCount()
+        {
+            var response = await _httpClient.GetAsync("/api/Contact/getcontactcount");
+            response.EnsureSuccessStatusCode();
+
+            var data = await response.Content.ReadAsStringAsync();
+            var count = JsonConvert.DeserializeObject<int>(data);
+
+            return count;
+        }
+
         public async Task<Contact> GetContactByIdAsync(int id)
         {
             var response = await _httpClient.GetAsync($"/api/Contact/{id}");

@@ -9,5 +9,6 @@ namespace Hotel.Business.ManagerServices.Abstracts
 {
     public interface ISendMessageService : IBaseService<SendMessage>
     {
+        public int GetSendMesaageCount();
     }
 }

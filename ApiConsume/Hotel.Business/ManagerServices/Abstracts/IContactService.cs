@@ -9,5 +9,6 @@ namespace Hotel.Business.ManagerServices.Abstracts
 {
     public interface IContactService : IBaseService<Contact>
     {
+        public int GetContactCount();
     }
 }

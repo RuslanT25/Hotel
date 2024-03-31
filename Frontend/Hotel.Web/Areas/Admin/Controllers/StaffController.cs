@@ -5,11 +5,13 @@ using Hotel.Entity.Models;
 using Hotel.Web.Validations.Staff;
 using Hotel.Web.Validations.Staff;
 using Hotel.WebApi.Services.WebApiServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class StaffController : Controller
     {
         readonly StaffApiService _staffApiService;

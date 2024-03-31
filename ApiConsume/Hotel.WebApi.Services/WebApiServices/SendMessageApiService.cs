@@ -33,6 +33,17 @@ namespace Hotel.WebApi.Services.WebApiServices
             return staff ?? throw new Exception("SendMessage is empty");
         }
 
+        public async Task<int> GetSendMessageCount()
+        {
+            var response = await _httpClient.GetAsync("/api/SendMessage/getsendmessagecount");
+            response.EnsureSuccessStatusCode();
+
+            var data = await response.Content.ReadAsStringAsync();
+            var count = JsonConvert.DeserializeObject<int>(data);
+
+            return count;
+        }
+
         public async Task<SendMessage> GetSendMessageByIdAsync(int id)
         {
             var response = await _httpClient.GetAsync($"/api/SendMessage/{id}");

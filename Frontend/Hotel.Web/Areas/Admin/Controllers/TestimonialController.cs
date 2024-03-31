@@ -3,11 +3,13 @@ using Hotel.Entity.DTOs.Testimonial;
 using Hotel.Entity.Models;
 using Hotel.Web.Validations.Testimonial;
 using Hotel.WebApi.Services.WebApiServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class TestimonialController : Controller
     {
         readonly TestimonialApiService _testimonialApiService;

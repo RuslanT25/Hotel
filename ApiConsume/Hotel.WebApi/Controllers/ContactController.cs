@@ -147,5 +147,11 @@ namespace Hotel.WebApi.Controllers
 
             return BadRequest(result);
         }
+
+        [HttpGet("getcontactcount")]
+        public IActionResult GetContactCount()
+        {
+            return Ok(_contactService.GetContactCount());
+        }
     }
 }

@@ -3,11 +3,13 @@ using Hotel.Entity.DTOs.Room;
 using Hotel.Entity.Models;
 using Hotel.Web.Validations.Room;
 using Hotel.WebApi.Services.WebApiServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class RoomController : Controller
     {
         readonly RoomApiService _roomApiService;

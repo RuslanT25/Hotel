@@ -16,5 +16,10 @@ namespace Hotel.Business.ManagerServices.Concretes
         {
             _contactRepository = contactRepository;
         }
+
+        public int GetContactCount()
+        {
+            return _contactRepository.GetContactCount();
+        }
     }
 }

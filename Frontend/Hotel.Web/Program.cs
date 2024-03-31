@@ -29,7 +29,9 @@ namespace Hotel.Web
                 });
             builder.Services.AddAutoMapper(typeof(MapProfile));
             builder.Services.AddAllValidators();
+
             builder.Services.AddDbContextService();
+
             builder.Services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<HotelDbContext>()
                 .AddDefaultTokenProviders();
@@ -39,6 +41,13 @@ namespace Hotel.Web
                 options.Password.RequireDigit = true;
                 options.Password.RequireNonAlphanumeric = false;
             });
+
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromDays(1);
+                options.LoginPath = "/admin/Login/Index";
+            });
+
 
             var app = builder.Build();
 
@@ -51,8 +60,9 @@ namespace Hotel.Web
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?code={0}");
 
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthorization();
