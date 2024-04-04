@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <div class="email-left-box">
                         <a href="email-compose.html" class="btn btn-primary btn-block">Compose</a>
-                        @await Html.PartialAsync("_ContactNavBarPartial");
+                        @await Html.PartialAsync("_ContactNavBarPartial", (ContactNavBarVM)ViewBag.NavBarModel);
 
                         @await Html.PartialAsync("_ContactCategoriesPartial");
                     </div>

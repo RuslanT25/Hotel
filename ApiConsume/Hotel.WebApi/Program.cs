@@ -24,6 +24,8 @@ namespace Hotel.WebApi
                     builder.RegisterModule(new AutofacBusinessModule());
                 });
 
+            builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
             builder.Services.AddCors(opt =>
             {
                 opt.AddPolicy("HotelApi", opts =>

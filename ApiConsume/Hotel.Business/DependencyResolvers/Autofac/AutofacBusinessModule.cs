@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Microsoft.Extensions.Configuration;
 using Hotel.Business.ManagerServices.Abstracts;
 using Hotel.Business.ManagerServices.Concretes;
 using Hotel.DAL.Contracts;
@@ -7,6 +8,7 @@ using Hotel.DAL.Repositories.Abstracts;
 using Hotel.DAL.Repositories.Concretes;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +45,8 @@ namespace Hotel.Business.DependencyResolvers.Autofac
 
             builder.RegisterType<SendMessageManager>().As<ISendMessageService>().SingleInstance();
             builder.RegisterType<SendMessageRepository>().As<ISendMessageRepository>().SingleInstance();
+
+            builder.RegisterType<EmailManager>().As<IEmailService>().SingleInstance();
         }
     }
 }

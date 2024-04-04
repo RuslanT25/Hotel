@@ -27,6 +27,15 @@ namespace Hotel.Web
                 {
                     builder.RegisterModule(new AutofacWebApiServiceModule());
                 });
+
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(builder =>
+                {
+                    builder.RegisterModule(new AutofacBusinessModule());
+                });
+
+            builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
             builder.Services.AddAutoMapper(typeof(MapProfile));
             builder.Services.AddAllValidators();
 
